@@ -35,7 +35,8 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.17.9"
+    "@babel/runtime": "^7.17.9",
+    "mapbox-gl": "^2.8.2"
   },
   "browserslist": {
     "production": [

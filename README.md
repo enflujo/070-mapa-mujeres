@@ -1,9 +1,4 @@
-# Plantilla: Webpack, Babel y SASS
-
-![Tamaño](https://img.shields.io/github/repo-size/enflujo/plantilla-webpack?color=%235757f7&label=Tama%C3%B1o%20repo&logo=open-access&logoColor=white)
-![Licencia](https://img.shields.io/github/license/enflujo/plantilla-webpack?label=Licencia&logo=open-source-initiative&logoColor=white)
-
-Configuración básica para iniciar proyectos y experimentos.
+# Mapa de agresiones a mujeres en el espacio público de Bogotá en 2022
 
 ## Recomendaciones antes de publicar
 
