@@ -12,7 +12,7 @@ mapboxgl.accessToken = token;
 
 const mapa = new mapboxgl.Map({
   container: 'mapa', // ID del contenedor
-  style: 'mapbox://styles/enflujo/cl3kdh8bp006b14lowcxmiwyd', // URL del estilo
+  style: 'mapbox://styles/enflujo/cl3kdh8bp006b14lowcxmiwyd', //'mapbox://styles/enflujo/cl3kdh8bp006b14lowcxmiwyd', // URL del estilo
   center: [-74.0791, 4.5462], // posición inicial del mapa [long, lat]
   zoom: 10, // zoom inicial
 });
@@ -25,17 +25,32 @@ function posicionRaton(e) {
 
 fetch('https://mujeres.enflujo.com/items/casos').then(function (respuesta) {
   respuesta.json().then(function (datos) {
+    // TODO Reemplazar i>7 por la longitud de la lista de casos
     for (let i = 0; i < 7; i++) {
-      console.log(datos.data[i]);
+      //  console.log(datos.data[i]);
 
       // Crear un elemento del DOM para cada marcador.
       const el = document.createElement('div');
       const ancho = 30;
       const alto = 30;
       const caso = datos.data[i];
-      const infoCaso = `Tipo de agresión: ${caso.tipo_de_agresion} <br> Fecha: ${caso.fecha} <br> Edad: ${
-        caso.edad ? caso.edad : 'desconocida'
-      }`;
+
+      const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      let fechaJS = new Date(caso.fecha);
+
+      // Información de la etiqueta
+      let fecha = `${caso.fecha ? fechaJS.toLocaleDateString('es-CO', opciones) : 'desconocida'}`;
+      let edad = `${caso.edad ? caso.edad : 'desconocida'}`;
+      let tiposDeAgresion = [];
+      if (caso.tipo_de_agresion.length > 1) {
+        tiposDeAgresion = caso.tipo_de_agresion.map((agresion) => {
+          return ` ${agresion}`;
+        });
+      } else {
+        tiposDeAgresion = caso.tipo_de_agresion[0];
+      }
+
+      const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad}`;
 
       // TODO: ¿pasar el enlace de las imágenes a Directus?
       el.className = 'marcador';
@@ -51,8 +66,9 @@ fetch('https://mujeres.enflujo.com/items/casos').then(function (respuesta) {
 
       el.addEventListener('mouseenter', () => {
         etiqueta.style.visibility = 'visible';
-        etiqueta.style.top = `${ratonY - 30}px`;
-        etiqueta.style.left = `${ratonX - 30}px`;
+        etiqueta.style.top = `${ratonY - 80}px`;
+        etiqueta.style.left = `${ratonX}px`;
+
         contenedorMapa.append(etiqueta);
       });
 

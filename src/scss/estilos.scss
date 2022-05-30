@@ -16,13 +16,19 @@ body {
 }
 
 #titulo {
-  margin-top: 3vh;
   text-align: center;
+  height: 1vh;
+  padding-top: 7vh;
+  background-color: rgb(121 118 199);
+  margin: 0;
+  color: whitesmoke;
+  padding-bottom: 12vh;
+  font-size: 2em;
+  font-family: monospace;
 }
 
 #mapa {
   position: absolute;
-  margin-top: 1vh;
   width: 100vw;
   height: 99vh;
   display: inline-block;
@@ -39,10 +45,11 @@ body {
 .etiqueta {
   padding: 1em;
   position: absolute;
-  width: 30vh;
+  width: 20vw;
   height: fit-content;
   top: 100px;
   left: 100px;
-  background-color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
+  z-index: 99;
 }
