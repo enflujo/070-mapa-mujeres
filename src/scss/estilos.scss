@@ -27,3 +27,22 @@ body {
   height: 99vh;
   display: inline-block;
 }
+
+.marcador {
+  display: block;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+
+.etiqueta {
+  padding: 1em;
+  position: absolute;
+  width: 30vh;
+  height: fit-content;
+  top: 100px;
+  left: 100px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
