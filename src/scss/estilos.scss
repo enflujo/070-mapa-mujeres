@@ -40,16 +40,19 @@ body {
   border-radius: 50%;
   cursor: pointer;
   padding: 0;
+  background-size: 100%;
 }
 
-.etiqueta {
+#etiqueta {
   padding: 1em;
   position: absolute;
-  width: 20vw;
+  // width: 20vw;
   height: fit-content;
   top: 100px;
   left: 100px;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   z-index: 99;
+  visibility: hidden;
+  pointer-events: none;
 }
