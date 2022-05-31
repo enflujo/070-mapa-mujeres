@@ -1,9 +1,10 @@
 import './scss/estilos.scss';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
+import iconos from './utilidades/iconos';
 
 const token = process.env.MAPBOX_TOKEN;
-const contenedorMapa = document.getElementById('mapa');
+const etiqueta = document.getElementById('etiqueta');
 let ratonX;
 let ratonY;
 
@@ -17,71 +18,57 @@ const mapa = new mapboxgl.Map({
   zoom: 10, // zoom inicial
 });
 
-document.addEventListener('mousemove', posicionRaton);
-function posicionRaton(e) {
+document.addEventListener('mousemove', (e) => {
   ratonX = e.clientX;
   ratonY = e.clientY;
+});
+
+async function inicio() {
+  const respuesta = await fetch('https://mujeres.enflujo.com/items/casos');
+  const { data: datos } = await respuesta.json();
+
+  datos.forEach((caso) => {
+    // Crear un elemento del DOM para cada marcador.
+    const el = document.createElement('div');
+    const ancho = 30;
+    const alto = 30;
+    const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const fechaJS = new Date(caso.fecha);
+
+    // Información de la etiqueta
+    const fecha = caso.fecha ? fechaJS.toLocaleDateString('es-CO', opciones) : 'desconocida';
+    const edad = caso.edad ? caso.edad : 'desconocida';
+
+    caso.tipo_de_agresion.sort();
+    const tiposDeAgresion = caso.tipo_de_agresion.join(', ');
+    const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad}`;
+
+    // TODO: ¿pasar el enlace de las imágenes a Directus?
+    // No se si sea necesario ya que de momento son muy pocos iconos.
+    el.className = 'marcador';
+    // Toca pensar si los iconos cambian según el grupo de categorías.
+    // Por ahora pongo el primero de la lista.
+    el.style.backgroundImage = `url(${iconos[caso.tipo_de_agresion[0]]})`;
+    el.style.width = `${ancho}px`;
+    el.style.height = `${alto}px`;
+
+    el.addEventListener('mouseenter', () => {
+      // Agregar una etiqueta que muestre la información de cada caso al pasar el ratón
+      etiqueta.innerHTML = infoCaso;
+      etiqueta.style.visibility = 'visible';
+      etiqueta.style.top = `${ratonY - 80}px`;
+      etiqueta.style.left = `${ratonX}px`;
+    });
+
+    el.addEventListener('mouseleave', () => {
+      etiqueta.style.visibility = 'hidden';
+    });
+
+    // Ubicar el marcador de cada caso
+    new mapboxgl.Marker(el).setLngLat(caso.lugar.coordinates).addTo(mapa);
+  });
 }
 
-fetch('https://mujeres.enflujo.com/items/casos').then(function (respuesta) {
-  respuesta.json().then(function (datos) {
-    // TODO Reemplazar i>7 por la longitud de la lista de casos
-    for (let i = 0; i < 7; i++) {
-      //  console.log(datos.data[i]);
-
-      // Crear un elemento del DOM para cada marcador.
-      const el = document.createElement('div');
-      const ancho = 30;
-      const alto = 30;
-      const caso = datos.data[i];
-
-      const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-      let fechaJS = new Date(caso.fecha);
-
-      // Información de la etiqueta
-      let fecha = `${caso.fecha ? fechaJS.toLocaleDateString('es-CO', opciones) : 'desconocida'}`;
-      let edad = `${caso.edad ? caso.edad : 'desconocida'}`;
-      let tiposDeAgresion = [];
-      if (caso.tipo_de_agresion.length > 1) {
-        tiposDeAgresion = caso.tipo_de_agresion.map((agresion) => {
-          return ` ${agresion}`;
-        });
-      } else {
-        tiposDeAgresion = caso.tipo_de_agresion[0];
-      }
-
-      const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad}`;
-
-      // TODO: ¿pasar el enlace de las imágenes a Directus?
-      el.className = 'marcador';
-      el.style.backgroundImage = `url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.vexels.com%2Fmedia%2Fusers%2F3%2F163428%2Fisolated%2Fpreview%2F7360ca8520660d6e6eb4d68bd4ed7224-icono-del-d-iacute-a-de-la-mujer-by-vexels.png&f=1&nofb=1)`;
-      el.style.width = `${ancho}px`;
-      el.style.height = `${alto}px`;
-      el.style.backgroundSize = '100%';
-
-      // Agregar una etiqueta que muestre la información de cada caso al pasar el ratón
-      const etiqueta = document.createElement('div');
-      etiqueta.classList.add('etiqueta');
-      etiqueta.innerHTML = infoCaso;
-
-      el.addEventListener('mouseenter', () => {
-        etiqueta.style.visibility = 'visible';
-        etiqueta.style.top = `${ratonY - 80}px`;
-        etiqueta.style.left = `${ratonX}px`;
-
-        contenedorMapa.append(etiqueta);
-      });
-
-      el.addEventListener('mouseleave', () => {
-        etiqueta.style.visibility = 'hidden';
-      });
-
-      // Ubicar el marcador de cada caso
-      new mapboxgl.Marker(el).setLngLat(caso.lugar.coordinates).addTo(mapa);
-    }
-
-    return datos;
-  });
-});
+inicio();
 
 console.log('..:: EnFlujo ::..');
