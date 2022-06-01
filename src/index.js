@@ -4,6 +4,7 @@ import mapboxgl from 'mapbox-gl';
 import iconos from './utilidades/iconos';
 
 const token = process.env.MAPBOX_TOKEN;
+const titulo = document.getElementById('titulo');
 const etiqueta = document.getElementById('etiqueta');
 let ratonX;
 let ratonY;
@@ -43,10 +44,18 @@ async function inicio() {
     const tiposDeAgresion = caso.tipo_de_agresion.join(', ');
     const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad}`;
 
+    // Imagen
+    // const contenedorMapa = document.getElementById('mapa');
+    const imagen = document.getElementById('imagen');
+    imagen.src =
+      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.laizquierdadiario.mx%2FIMG%2Farton136358.jpg&f=1&nofb=1';
+    //imagen.classList.add('imagen');
+    //contenedorMapa.append(imagen);
+
     // TODO: ¿pasar el enlace de las imágenes a Directus?
     // No se si sea necesario ya que de momento son muy pocos iconos.
     el.className = 'marcador';
-    // Toca pensar si los iconos cambian según el grupo de categorías.
+    // Toca pensar si los iconos cambian según el grupo de categorías. -> Sí cambian
     // Por ahora pongo el primero de la lista.
     el.style.backgroundImage = `url(${iconos[caso.tipo_de_agresion[0]]})`;
     el.style.width = `${ancho}px`;
@@ -58,10 +67,17 @@ async function inicio() {
       etiqueta.style.visibility = 'visible';
       etiqueta.style.top = `${ratonY - 80}px`;
       etiqueta.style.left = `${ratonX}px`;
+
+      titulo.style.display = 'none';
+      imagen.style.visibility = 'visible';
+
+      console.log('hola');
     });
 
     el.addEventListener('mouseleave', () => {
+      titulo.style.display = 'block';
       etiqueta.style.visibility = 'hidden';
+      imagen.style.visibility = 'hidden';
     });
 
     // Ubicar el marcador de cada caso

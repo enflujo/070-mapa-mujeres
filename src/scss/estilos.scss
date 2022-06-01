@@ -17,14 +17,13 @@ body {
 
 #titulo {
   text-align: center;
-  height: 1vh;
-  padding-top: 7vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: rgb(121 118 199);
   margin: 0;
   color: whitesmoke;
-  padding-bottom: 12vh;
-  font-size: 2em;
-  font-family: monospace;
+  font-size: 1.7em;
+  font-family: 'Nunito', sans-serif;
 }
 
 #mapa {
@@ -55,4 +54,13 @@ body {
   z-index: 99;
   visibility: hidden;
   pointer-events: none;
+}
+
+#imagen {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  mix-blend-mode: color-burn;
+  z-index: 99;
+  visibility: hidden;
 }
