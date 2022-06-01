@@ -6,6 +6,9 @@ import iconos from './utilidades/iconos';
 const token = process.env.MAPBOX_TOKEN;
 const titulo = document.getElementById('titulo');
 const etiqueta = document.getElementById('etiqueta');
+// Imagen
+// const contenedorMapa = document.getElementById('mapa');
+const imagen = document.getElementById('imagen');
 let ratonX;
 let ratonY;
 
@@ -44,9 +47,6 @@ async function inicio() {
     const tiposDeAgresion = caso.tipo_de_agresion.join(', ');
     const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad}`;
 
-    // Imagen
-    // const contenedorMapa = document.getElementById('mapa');
-    const imagen = document.getElementById('imagen');
     imagen.src =
       'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.laizquierdadiario.mx%2FIMG%2Farton136358.jpg&f=1&nofb=1';
     //imagen.classList.add('imagen');

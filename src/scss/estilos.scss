@@ -24,6 +24,9 @@ body {
   color: whitesmoke;
   font-size: 1.7em;
   font-family: 'Nunito', sans-serif;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
 }
 
 #mapa {
@@ -63,4 +66,5 @@ body {
   mix-blend-mode: color-burn;
   z-index: 99;
   visibility: hidden;
+  pointer-events: none;
 }
