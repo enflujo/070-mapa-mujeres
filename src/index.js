@@ -3,6 +3,19 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
 import iconos from './utilidades/iconos';
 
+// Importar imágenes
+import violencia_policial from './imgs/violencia_policial.jpeg';
+import violencia_sexual from './imgs/violadores.jpg';
+import desaparicion from './imgs/desaparicion.png';
+import robo from './imgs/robo.jpeg';
+
+const imagenes = {
+  Robo: robo,
+  'Violencia sexual': violencia_sexual,
+  'Violencia policial': violencia_policial,
+  Desaparición: desaparicion,
+};
+
 const token = process.env.MAPBOX_TOKEN;
 const titulo = document.getElementById('titulo');
 const etiqueta = document.getElementById('etiqueta');
@@ -47,11 +60,6 @@ async function inicio() {
     const tiposDeAgresion = caso.tipo_de_agresion.join(', ');
     const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad}`;
 
-    imagen.src =
-      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.laizquierdadiario.mx%2FIMG%2Farton136358.jpg&f=1&nofb=1';
-    //imagen.classList.add('imagen');
-    //contenedorMapa.append(imagen);
-
     // TODO: ¿pasar el enlace de las imágenes a Directus?
     // No se si sea necesario ya que de momento son muy pocos iconos.
     el.className = 'marcador';
@@ -69,9 +77,10 @@ async function inicio() {
       etiqueta.style.left = `${ratonX}px`;
 
       titulo.style.display = 'none';
-      imagen.style.visibility = 'visible';
 
-      console.log('hola');
+      // Mostrar una imagen sobrepuesta al mapa relacionada con el tipo de agresión
+      imagen.src = imagenes[caso.tipo_de_agresion[0]];
+      imagen.style.visibility = 'visible';
     });
 
     el.addEventListener('mouseleave', () => {
