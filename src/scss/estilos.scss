@@ -46,20 +46,22 @@ body {
 }
 
 #etiqueta {
-  padding: 1em;
+  display: flex;
+  padding: 2.2em 2em;
   position: absolute;
-  // width: 20vw;
+  width: 40%;
   height: fit-content;
   top: 100px;
   left: 100px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(182, 81, 245, 0.8);
+  color: white;
   border-radius: 10px;
   z-index: 99;
   visibility: hidden;
   pointer-events: none;
 }
 
-#imagen {
+.imagen {
   width: 100%;
   height: auto;
   position: fixed;
@@ -67,4 +69,18 @@ body {
   z-index: 99;
   visibility: hidden;
   pointer-events: none;
+  opacity: 0.3;
+}
+
+#hechos {
+  font-style: italic;
+}
+
+#cerrar {
+  cursor: pointer;
+  color: white;
+  height: fit-content;
+  position: relative;
+  top: -24px;
+  left: 420px;
 }
