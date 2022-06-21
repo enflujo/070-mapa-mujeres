@@ -64,13 +64,13 @@ async function inicio() {
     const ancho = 30;
     const alto = 30;
     const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const fechaJS = dayjs(new Date(caso.fecha)).format('DD/MM/YYYY');
+    const fechaJS = dayjs(caso.fecha);
 
     const imagen = document.createElement('img');
     imagen.classList.add('imagen');
 
     // Información de la etiqueta
-    const fecha = caso.fecha ? fechaJS : 'desconocida';
+    const fecha = caso.fecha ? fechaJS.format('DD/MM/YYYY') : 'desconocida';
     const edad = caso.edad ? caso.edad : 'desconocida';
     const enlace = caso.enlace ? caso.enlace : '';
     const hechos = caso.descripcion ? caso.descripcion : '';
@@ -96,6 +96,7 @@ async function inicio() {
 
       informacionEtiqueta.innerHTML = infoCaso;
 
+      // TODO: ¿Botón para cerrar o solo mouseleave?
       const cerrar = document.getElementById('cerrar');
 
       titulo.style.display = 'none';
@@ -106,7 +107,7 @@ async function inicio() {
       imagen.style.visibility = 'visible';
     });
 
-    el.addEventListener('mousedown', () => {
+    el.addEventListener('mouseleave', () => {
       titulo.style.display = 'block';
       etiqueta.style.visibility = 'hidden';
       imagen.style.visibility = 'hidden';
