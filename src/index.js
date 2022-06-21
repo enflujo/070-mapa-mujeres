@@ -1,5 +1,7 @@
 import './scss/estilos.scss';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import dayjs from 'dayjs';
+dayjs.locale('es');
 import mapboxgl from 'mapbox-gl';
 import iconos from './utilidades/iconos';
 
@@ -41,7 +43,8 @@ mapboxgl.accessToken = token;
 
 const mapa = new mapboxgl.Map({
   container: 'mapa', // ID del contenedor
-  style: 'mapbox://styles/enflujo/cl3kdh8bp006b14lowcxmiwyd', // URL del estilo
+  style: 'mapbox://styles/enflujo/cl44ov8i8000214rodtnuvshe',
+  // URL del estilo
   center: [-74.0791, 4.5462], // posición inicial del mapa [long, lat]
   zoom: 10, // zoom inicial
 });
@@ -61,13 +64,13 @@ async function inicio() {
     const ancho = 30;
     const alto = 30;
     const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const fechaJS = new Date(caso.fecha);
+    const fechaJS = dayjs(new Date(caso.fecha)).format('DD/MM/YYYY');
 
     const imagen = document.createElement('img');
     imagen.classList.add('imagen');
 
     // Información de la etiqueta
-    const fecha = caso.fecha ? fechaJS.toLocaleDateString('es-CO', opciones) : 'desconocida';
+    const fecha = caso.fecha ? fechaJS : 'desconocida';
     const edad = caso.edad ? caso.edad : 'desconocida';
     const enlace = caso.enlace ? caso.enlace : '';
     const hechos = caso.descripcion ? caso.descripcion : '';
