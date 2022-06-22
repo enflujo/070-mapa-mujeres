@@ -1,7 +1,9 @@
 import './scss/estilos.scss';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import dayjs from 'dayjs';
-dayjs.locale('es');
+import utc from 'dayjs/plugin/utc';
+import zonaHoraria from 'dayjs/plugin/timezone';
+import 'dayjs/locale/es-mx';
 import mapboxgl from 'mapbox-gl';
 import iconos from './utilidades/iconos';
 
@@ -14,6 +16,11 @@ import robo from './imgs/fotos/robo.jpeg';
 // Importar íconos
 import ic_desaparicion from './imgs/iconos/mano_violeta.png';
 import ic_violencia_sexual from './imgs/iconos/violencia_sexual.png';
+
+dayjs.extend(utc);
+dayjs.extend(zonaHoraria);
+dayjs.locale('es-mx');
+dayjs.tz.setDefault('America/Bogota');
 
 const imagenes = {
   Robo: robo,
@@ -70,7 +77,7 @@ async function inicio() {
     imagen.classList.add('imagen');
 
     // Información de la etiqueta
-    const fecha = caso.fecha ? fechaJS.format('DD/MM/YYYY') : 'desconocida';
+    const fecha = caso.fecha ? fechaJS.format('MMMM D, YYYY h:mm A') : 'desconocida';
     const edad = caso.edad ? caso.edad : 'desconocida';
     const enlace = caso.enlace ? caso.enlace : '';
     const hechos = caso.descripcion ? caso.descripcion : '';
