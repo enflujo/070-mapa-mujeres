@@ -89,7 +89,6 @@ body {
   a:hover {
     color: black;
   }
-
 }
 
 .imagen {
@@ -121,4 +120,28 @@ body {
 
 #cerrar:hover {
   color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  #titulo {
+    font-size: 1.2em;
+    margin: 4%;
+  }
+
+  #etiqueta {
+    display: flex;
+    padding: 2.2em 2em;
+    position: absolute;
+    width: 85%;
+    height: fit-content;
+    top: 25%;
+    left: 7%;
+  }
+
+  .imagen {
+    width: auto;
+    height: 60%;
+    left: -45%;
+    top: 10%;
+  }
 }
