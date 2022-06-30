@@ -17,16 +17,23 @@ body {
 
 #titulo {
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: rgb(121 118 199);
   margin: 0;
-  color: whitesmoke;
-  font-size: 1.7em;
-  font-family: 'Nunito', sans-serif;
+  margin-top: 0px;
+  margin-left: 0px;
+  color: rgb(121, 118, 199);
+  font-family: mono;
   position: fixed;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   z-index: 99;
+  opacity: 1;
+  margin-left: 13%;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 2%;
+  font-weight: 900;
+  font-size: 3em;
 }
 
 #mapa {
@@ -49,16 +56,20 @@ body {
   display: flex;
   padding: 2.2em 2em;
   position: absolute;
-  width: 40%;
+  width: 30%;
   height: fit-content;
-  top: 100px;
-  left: 100px;
-  background-color: rgba(182, 81, 245, 0.8);
+  top: 38%;
+  left: 34%;
+  background-color: #7976c7;
   color: white;
   border-radius: 10px;
   z-index: 99;
   visibility: hidden;
   pointer-events: none;
+  font-family: monospace;
+  font-size: 1.1em;
+  opacity: 0.7;
+  font-weight: bold;
 }
 
 .imagen {
@@ -69,11 +80,12 @@ body {
   z-index: 99;
   visibility: hidden;
   pointer-events: none;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 #hechos {
   font-style: italic;
+  padding-top: 1em;
 }
 
 #cerrar {
@@ -81,6 +93,6 @@ body {
   color: white;
   height: fit-content;
   position: relative;
-  top: -24px;
-  left: 420px;
+  top: -20px;
+  left: 520px;
 }
