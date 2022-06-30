@@ -5,46 +5,51 @@ import utc from 'dayjs/plugin/utc';
 import zonaHoraria from 'dayjs/plugin/timezone';
 import 'dayjs/locale/es-mx';
 import mapboxgl from 'mapbox-gl';
-import iconos from './utilidades/iconos';
+//import iconos from './utilidades/iconos';
 import { numeroRandom } from './utilidades/ayudas';
 
 // Importar imágenes
-import violencia_policial from './imgs/fotos/violencia_policial_BN.png';
+import violenciaPolicial from './imgs/fotos/violencia_policial_BN.png';
 import puercos from './imgs/fotos/puercos_violadores_BN.png';
 import libre from './imgs/fotos/libre_no_valiente_BN.png';
 import camino from './imgs/fotos/popayan_camino_a_casa_BN.png';
-import carcel from './imgs/fotos/carcel_agresor_BN.png';
 import perdon from './imgs/fotos/ni_perdon_BN.png';
 import piropo from './imgs/fotos/no_quiero_su_piropo_pirobo_web_BN.png';
 import respondemos from './imgs/fotos/respondemos_todas7_BN.png';
 
 // Importar íconos
-import ic_desaparicion from './imgs/iconos/mano_violeta.png';
-import ic_violencia_sexual from './imgs/iconos/violencia_sexual.png';
+import icAcoso from './imgs/iconos/acoso_callejero_blanco_1.png';
+import icRobo from './imgs/iconos/robo_blanco_2.png';
+import icAgresionSexual from './imgs/iconos/agresion_sexual_blanco.png';
+import icDesaparicion from './imgs/iconos/desaparición_blanco_2.png';
+import icViolenciaPolicial from './imgs/iconos/violencia_policial_blanco.png';
 
 dayjs.extend(utc);
 dayjs.extend(zonaHoraria);
 dayjs.locale('es-mx');
 dayjs.tz.setDefault('America/Bogota');
 
-const imagenes = [violencia_policial, puercos, libre, camino, carcel, perdon, piropo, respondemos];
+const imagenes = [violenciaPolicial, puercos, libre, camino, perdon, piropo, respondemos];
 
-/* const iconos = {
-  Robo: ic_robo,
-  'Violencia sexual': ic_violencia_sexual,
-  'Violencia policial': violencia_policial,
-  Desaparición: ic_desaparicion,
-}; */
+const iconos = {
+  Robo: icRobo,
+  'Violencia sexual': icAgresionSexual,
+  'Violencia policial': icViolenciaPolicial,
+  Desaparición: icDesaparicion,
+  'Acoso callejero': icAcoso,
+};
 
 const token = process.env.MAPBOX_TOKEN;
 const cuerpo = document.getElementById('contenedor');
 const titulo = document.getElementById('titulo');
 const etiqueta = document.getElementById('etiqueta');
 const informacionEtiqueta = document.getElementById('informacion');
+const lienzo = document.getElementById('lienzo');
 // TODO: ¿Botón para cerrar o solo mouseleave?
 const cerrar = document.getElementById('cerrar');
 
 let etiquetaVisible = false;
+let opacidadLienzo = 0;
 
 let ratonX;
 let ratonY;
@@ -70,17 +75,21 @@ async function inicio() {
   const { data: datos } = await respuesta.json();
 
   datos.forEach((caso) => {
+    if (caso.lugar) {
+      console.log(caso.id, caso.lugar, caso.tipo_de_agresion);
+    }
+
     // Crear un elemento del DOM para cada marcador.
     const el = document.createElement('div');
     const ancho = 30;
     const alto = 30;
     const fechaJS = dayjs(caso.fecha);
 
-    /* const imagen = document.createElement('img');
-    imagen.classList.add('imagen'); */
+    const imagen = document.createElement('img');
+    imagen.classList.add('imagen');
 
     // Información de la etiqueta
-    let fecha = caso.fecha ? fechaJS.format('MMMM D, YYYY h:mm A') : 'desconocida';
+    let fecha = caso.fecha ? fechaJS.format('MMMM D, YYYY') : 'desconocida';
     fecha = fecha.charAt(0).toUpperCase() + fecha.slice(1);
     const edad = caso.edad ? caso.edad : 'desconocida';
     const enlace = caso.enlace ? caso.enlace : '';
@@ -88,7 +97,15 @@ async function inicio() {
 
     caso.tipo_de_agresion.sort();
     const tiposDeAgresion = caso.tipo_de_agresion.join(', ').toUpperCase();
-    const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad} <br>  <div id="hechos">${hechos}</div> <br> <a href="${enlace}" >Fuente<a/>`;
+    let estadoDesaparicion = '';
+    if (caso.tipo_de_agresion.includes('Desaparición') && caso.aparecio === true) {
+      estadoDesaparicion = '(Ya apareció)';
+    } else {
+      estadoDesaparicion = '';
+    }
+    const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad} <br>  <div id="hechos">${hechos} ${estadoDesaparicion}</div> <br> <a href="${enlace}" target="_blank">Fuente<a/>`;
+
+    cerrar.innerText = 'x';
 
     // TODO: ¿pasar el enlace de las imágenes a Directus?
     // No se si sea necesario ya que de momento son muy pocos iconos.
@@ -101,6 +118,7 @@ async function inicio() {
     el.style.height = `${alto}px`;
 
     el.addEventListener('mousedown', () => {
+      etiquetaVisible = !etiquetaVisible;
       // Agregar una etiqueta que muestre la información de cada caso al pasar el ratón
       if (etiquetaVisible) {
         etiqueta.style.visibility = 'visible';
@@ -116,21 +134,21 @@ async function inicio() {
       titulo.style.display = 'none';
 
       // Mostrar una imagen sobrepuesta al mapa relacionada con el tipo de agresión
-      // cuerpo.appendChild(imagen);
-      // let num = numeroRandom(0, imagenes.length - 1);
-
-      // imagen.src = imagenes[num];
-      // imagen.style.visibility = 'visible';
-
-      etiquetaVisible = !etiquetaVisible;
+      cuerpo.appendChild(imagen);
+      let num = numeroRandom(0, imagenes.length - 1);
+      opacidadLienzo = +0.2;
+      lienzo.style.opacity = opacidadLienzo;
+      imagen.src = imagenes[num];
+      imagen.style.opacity = 0.9;
+      imagen.style.visibility = 'visible';
     });
 
     cerrar.addEventListener('mousedown', () => {
       titulo.style.display = 'block';
       etiqueta.style.visibility = 'hidden';
-      // imagen.style.opacity = 0.05;
-
-      console.log('miau');
+      imagen.style.opacity = 0.05;
+      lienzo.style.opacity = 0;
+      etiquetaVisible = false;
     });
 
     // Ubicar el marcador de cada caso
