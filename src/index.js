@@ -5,7 +5,6 @@ import utc from 'dayjs/plugin/utc';
 import zonaHoraria from 'dayjs/plugin/timezone';
 import 'dayjs/locale/es-mx';
 import mapboxgl from 'mapbox-gl';
-//import iconos from './utilidades/iconos';
 import { numeroRandom } from './utilidades/ayudas';
 
 // Importar imágenes
@@ -39,6 +38,9 @@ const iconos = {
   'Acoso callejero': icAcoso,
 };
 
+const imagen = document.createElement('img');
+imagen.classList.add('imagen');
+
 const token = process.env.MAPBOX_TOKEN;
 const cuerpo = document.getElementById('contenedor');
 const titulo = document.getElementById('titulo');
@@ -49,13 +51,21 @@ const lienzo = document.getElementById('lienzo');
 const cerrar = document.getElementById('cerrar');
 
 let etiquetaVisible = false;
-let opacidadLienzo = 0;
 
 let ratonX;
 let ratonY;
 
 // Crear nuevo mapa usando un estilo y un token de MapBox
 mapboxgl.accessToken = token;
+
+function cerrarEtiqueta() {
+  titulo.style.display = 'block';
+  etiqueta.style.visibility = 'hidden';
+  imagen.style.opacity = 0.05;
+  lienzo.style.opacity = 0;
+  etiquetaVisible = false;
+  console.log('hola!!');
+}
 
 const mapa = new mapboxgl.Map({
   container: 'mapa', // ID del contenedor
@@ -74,6 +84,18 @@ async function inicio() {
   const respuesta = await fetch('https://mujeres.enflujo.com/items/casos');
   const { data: datos } = await respuesta.json();
 
+  cerrar.innerText = 'x';
+
+  document.body.addEventListener('click', (evento) => {
+    if (etiquetaVisible) {
+      if (!(etiqueta === evento.target || etiqueta.contains(evento.target))) {
+        cerrarEtiqueta();
+      }
+    }
+  });
+
+  cerrar.addEventListener('click', cerrarEtiqueta);
+
   datos.forEach((caso) => {
     if (caso.lugar) {
       console.log(caso.id, caso.lugar, caso.tipo_de_agresion);
@@ -84,9 +106,6 @@ async function inicio() {
     const ancho = 30;
     const alto = 30;
     const fechaJS = dayjs(caso.fecha);
-
-    const imagen = document.createElement('img');
-    imagen.classList.add('imagen');
 
     // Información de la etiqueta
     let fecha = caso.fecha ? fechaJS.format('MMMM D, YYYY') : 'desconocida';
@@ -105,29 +124,21 @@ async function inicio() {
     }
     const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad} <br>  <div id="hechos">${hechos} ${estadoDesaparicion}</div> <br> <a href="${enlace}" target="_blank">Fuente<a/>`;
 
-    cerrar.innerText = 'x';
-
     // TODO: ¿pasar el enlace de las imágenes a Directus?
     // No se si sea necesario ya que de momento son muy pocos iconos.
     el.className = 'marcador';
     // Toca pensar si los iconos cambian según el grupo de categorías. -> Sí cambian
     // Por ahora pongo el primero de la lista.
     el.style.backgroundImage = `url(${iconos[caso.tipo_de_agresion[0]]})`;
-    // el.style.backgroundImage = 'url(https://www.citypng.com/public/uploads/preview/-41601583586iyyvcbwc2i.png)';
     el.style.width = `${ancho}px`;
     el.style.height = `${alto}px`;
 
-    el.addEventListener('mousedown', () => {
-      etiquetaVisible = !etiquetaVisible;
-      // Agregar una etiqueta que muestre la información de cada caso al pasar el ratón
-      if (etiquetaVisible) {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!etiquetaVisible) {
         etiqueta.style.visibility = 'visible';
-      } else if (!etiquetaVisible) {
-        etiqueta.style.visibility = 'hidden';
+        etiquetaVisible = true;
       }
-
-      //etiqueta.style.top = `${ratonY - 80}px`;
-      //etiqueta.style.left = `${ratonX}px`;
 
       informacionEtiqueta.innerHTML = infoCaso;
 
@@ -136,19 +147,10 @@ async function inicio() {
       // Mostrar una imagen sobrepuesta al mapa relacionada con el tipo de agresión
       cuerpo.appendChild(imagen);
       let num = numeroRandom(0, imagenes.length - 1);
-      opacidadLienzo = +0.2;
-      lienzo.style.opacity = opacidadLienzo;
+      lienzo.style.opacity = 0.1;
       imagen.src = imagenes[num];
       imagen.style.opacity = 0.9;
       imagen.style.visibility = 'visible';
-    });
-
-    cerrar.addEventListener('mousedown', () => {
-      titulo.style.display = 'block';
-      etiqueta.style.visibility = 'hidden';
-      imagen.style.opacity = 0.05;
-      lienzo.style.opacity = 0;
-      etiquetaVisible = false;
     });
 
     // Ubicar el marcador de cada caso
