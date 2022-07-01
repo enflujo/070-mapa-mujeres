@@ -47,7 +47,6 @@ const titulo = document.getElementById('titulo');
 const etiqueta = document.getElementById('etiqueta');
 const informacionEtiqueta = document.getElementById('informacion');
 const lienzo = document.getElementById('lienzo');
-// TODO: ¿Botón para cerrar o solo mouseleave?
 const cerrar = document.getElementById('cerrar');
 
 let etiquetaVisible = false;
@@ -62,9 +61,9 @@ function cerrarEtiqueta() {
   titulo.style.display = 'block';
   etiqueta.style.visibility = 'hidden';
   imagen.style.opacity = 0.05;
+  imagen.src = '';
   lienzo.style.opacity = 0;
   etiquetaVisible = false;
-  console.log('hola!!');
 }
 
 const mapa = new mapboxgl.Map({
