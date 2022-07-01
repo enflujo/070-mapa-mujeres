@@ -1,0 +1,38 @@
+name: Despliegue
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    name: 🐘 Desplegar
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🐯 Obtener código del repositorio
+        uses: actions/checkout@v3
+
+      - name: 🐝 Usar Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+
+      - name: Crear .env
+        run: |
+          touch .env
+          echo MAPBOX_TOKEN=${{ secrets.MAPBOX_TOKEN }} >> .env
+          cat .env
+      - name: 🔨 Hacer build
+        run: |
+          npm install
+          npm run build
+      - name: 🦅 Enviar por FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: cerosetenta.uniandes.edu.co
+          username: ${{ secrets.USUARIO_FTP }}
+          server-dir: especiales/prueba/
+          local-dir: ./build/
+          password: ${{ secrets.CLAVE_FTP }}
