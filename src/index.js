@@ -48,6 +48,9 @@ const etiqueta = document.getElementById('etiqueta');
 const informacionEtiqueta = document.getElementById('informacion');
 const lienzo = document.getElementById('lienzo');
 const cerrar = document.getElementById('cerrar');
+const cerrarCreditos = document.getElementById('cerrarCreditos');
+const creditos = document.getElementById('creditos');
+const abrirCreditos = document.getElementById('acerca');
 
 let etiquetaVisible = false;
 
@@ -91,6 +94,22 @@ async function inicio() {
         cerrarEtiqueta();
       }
     }
+
+    if (creditos.classList.contains('visible')) {
+      console.log('hey');
+      if (!(creditos === evento.target || creditos.contains(evento.target))) {
+        creditos.classList.remove('visible');
+      }
+    }
+  });
+
+  cerrarCreditos.addEventListener('click', () => {
+    creditos.classList.remove('visible');
+  });
+
+  abrirCreditos.addEventListener('click', (evento) => {
+    evento.stopPropagation();
+    creditos.classList.toggle('visible');
   });
 
   cerrar.addEventListener('click', cerrarEtiqueta);
