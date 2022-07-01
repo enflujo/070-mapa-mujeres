@@ -7,7 +7,6 @@ module.exports = {
     programa: './src/index.js',
   },
   output: {
-    publicPath: '/',
     filename: '[name].[fullhash].js',
     chunkFilename: '[name].[fullhash].js',
     path: path.resolve(__dirname, 'publico'),
