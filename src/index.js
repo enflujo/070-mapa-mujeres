@@ -17,11 +17,11 @@ import piropo from './imgs/fotos/no_quiero_su_piropo_pirobo_web_BN.png';
 import respondemos from './imgs/fotos/respondemos_todas7_BN.png';
 
 // Importar íconos
-import icAcoso from './imgs/iconos/acoso_callejero_blanco_1.png';
-import icRobo from './imgs/iconos/robo_blanco_2.png';
-import icAgresionSexual from './imgs/iconos/agresion_sexual_blanco.png';
-import icDesaparicion from './imgs/iconos/desaparición_blanco_2.png';
-import icViolenciaPolicial from './imgs/iconos/violencia_policial_blanco.png';
+import icAcoso from './imgs/iconos/acoso_callejero_transparente_2.svg';
+import icRobo from './imgs/iconos/robo_transparente_1.svg';
+import icAgresionSexual from './imgs/iconos/agresion_sexual_transparente.svg';
+import icDesaparicion from './imgs/iconos/desaparicion_grande.svg';
+import icViolenciaPolicial from './imgs/iconos/violencia_policial_blanco.svg';
 
 dayjs.extend(utc);
 dayjs.extend(zonaHoraria);

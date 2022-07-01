@@ -72,6 +72,7 @@
   a:hover {
     color: black;
   }
+
 }
 
 .imagen {
@@ -90,9 +91,14 @@
   padding-top: 1em;
 }
 
+#foto {
+  width: 50%;
+  height: auto;
+}
+
 #cerrar {
   cursor: pointer;
-  color: white;
+  color: #f3e1f2;
   position: relative;
   margin-top: -5%;
   left: 100%;
@@ -217,5 +223,6 @@
       letter-spacing: 1px;
     }
   }
+
   // display: none;
 }
