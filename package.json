@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.17.9",
+    "dayjs": "^1.11.3",
     "mapbox-gl": "^2.8.2"
   },
   "browserslist": {
