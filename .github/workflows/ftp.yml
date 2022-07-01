@@ -34,5 +34,5 @@ jobs:
           server: cerosetenta.uniandes.edu.co
           username: ${{ secrets.USUARIO_FTP }}
           server-dir: especiales/prueba/
-          local-dir: ./build/
+          local-dir: ./publico/
           password: ${{ secrets.CLAVE_FTP }}
