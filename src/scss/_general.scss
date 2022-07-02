@@ -2,6 +2,7 @@
   background-color: rgba($colorClaro, 0.8);
   color: $colorOscuro;
 }
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -26,8 +27,13 @@ a:link {
   font-weight: bold;
   color: $colorClaro;
   transition: background-color 0.25s ease-in-out;
+  padding: 1px 6px;
+  border-radius: 6px;
+
 
   &:hover {
     background-color: rgba($colorClaro, 0);
+    padding: 1px 6px;
+    border-radius: 6px;
   }
 }

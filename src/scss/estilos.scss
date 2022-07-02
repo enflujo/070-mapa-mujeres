@@ -111,33 +111,9 @@
   color: black;
 }
 
-@media only screen and (max-width: 600px) {
-  #titulo {
-    font-size: 1.2em;
-    margin: 4%;
-  }
-
-  #etiqueta {
-    display: flex;
-    padding: 2.2em 2em;
-    position: absolute;
-    width: 85%;
-    height: fit-content;
-    top: 25%;
-    left: 7%;
-  }
-
-  .imagen {
-    width: auto;
-    height: 60%;
-    left: -45%;
-    top: 10%;
-  }
-}
-
 #acerca {
   color: $colorOscuro;
-  font-size: 2em;
+  font-size: 1.7em;
   position: fixed;
   cursor: pointer;
   right: 1em;
@@ -146,6 +122,7 @@
   padding: 0.3em;
   transition: all 0.25s ease-in-out;
   background-color: transparent;
+  border-radius: 6px;
 
   &:hover {
     background-color: $colorOscuro;
@@ -174,7 +151,7 @@
 
   #cerrarCreditos {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2em;
+    font-size: 1.6em;
     margin: 0;
     padding: 0;
     cursor: pointer;
@@ -182,16 +159,17 @@
     text-align: right;
     margin-right: -1em;
 
+
     &:hover {
       opacity: 0.7;
     }
   }
 
   h1 {
-    font-size: 3em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.7em;
+    font-family: monospace;
     font-weight: normal;
-    width: 30%;
+    width: 100%;
   }
 
   h3 {
@@ -225,4 +203,91 @@
   }
 
   // display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #titulo {
+    font-size: 1.2em;
+    margin: 4%;
+  }
+
+  #etiqueta {
+    display: flex;
+    padding: 2.2em 2em;
+    position: absolute;
+    width: 85%;
+    height: fit-content;
+    top: 25%;
+    left: 7%;
+  }
+
+  .imagen {
+    width: auto;
+    height: 60%;
+    left: -45%;
+    top: 10%;
+  }
+
+  #acerca {
+    position: fixed;
+    top: 88%;
+
+    &:hover {
+      background-color: $colorOscuro;
+      color: $colorClaro;
+    }
+  }
+
+  #creditos {
+    background-color: #7976c7;
+    color: white;
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    padding: 1em 2em;
+    font-size: 1em;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    &.visible {
+      left: 0;
+      opacity: 1;
+    }
+
+
+
+    #cerrarCreditos {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1em;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: opacity 0.15s ease-out;
+      text-align: right;
+      margin-right: -1em;
+
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    h1 {
+      font-size: 1.5em;
+      font-family: monospace;
+      font-weight: normal;
+      width: 100%;
+    }
+
+    h3 {
+      border-bottom: 1px dashed lighten($colorOscuro, 20%);
+      padding-bottom: 0.5em;
+      margin: 1.5em 0;
+    }
+
+    // display: none;
+  }
 }
