@@ -17,11 +17,11 @@ import piropo from './imgs/fotos/no_quiero_su_piropo_pirobo_web_BN.png';
 import respondemos from './imgs/fotos/respondemos_todas7_BN.png';
 
 // Importar íconos
-import icAcoso from './imgs/iconos/acoso_callejero_transparente_2.svg';
-import icRobo from './imgs/iconos/robo_transparente_1.svg';
-import icAgresionSexual from './imgs/iconos/agresion_sexual_transparente.svg';
-import icDesaparicion from './imgs/iconos/desaparicion_grande.svg';
-import icViolenciaPolicial from './imgs/iconos/violencia_policial_blanco.svg';
+import icAcoso from './imgs/iconos/acoso_rojo.svg';
+import icRobo from './imgs/iconos/robo_rojo.svg';
+import icAgresionSexual from './imgs/iconos/abuso_rojo2.svg';
+import icDesaparicion from './imgs/iconos/desaparicion_rojo.svg';
+import icViolenciaPolicial from './imgs/iconos/violencia_policial_rojo.svg';
 
 dayjs.extend(utc);
 dayjs.extend(zonaHoraria);
@@ -96,7 +96,6 @@ async function inicio() {
     }
 
     if (creditos.classList.contains('visible')) {
-      console.log('hey');
       if (!(creditos === evento.target || creditos.contains(evento.target))) {
         creditos.classList.remove('visible');
       }
@@ -115,10 +114,6 @@ async function inicio() {
   cerrar.addEventListener('click', cerrarEtiqueta);
 
   datos.forEach((caso) => {
-    if (caso.lugar) {
-      console.log(caso.id, caso.lugar, caso.tipo_de_agresion);
-    }
-
     // Crear un elemento del DOM para cada marcador.
     const el = document.createElement('div');
     const ancho = 30;
@@ -130,6 +125,7 @@ async function inicio() {
     fecha = fecha.charAt(0).toUpperCase() + fecha.slice(1);
     const edad = caso.edad ? caso.edad : 'desconocida';
     const enlace = caso.enlace ? caso.enlace : '';
+    console.log(caso.id, enlace);
     const hechos = caso.descripcion ? caso.descripcion : '';
 
     caso.tipo_de_agresion.sort();
@@ -140,7 +136,8 @@ async function inicio() {
     } else {
       estadoDesaparicion = '';
     }
-    const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad} <br>  <div id="hechos">${hechos} ${estadoDesaparicion}</div> <br> <a href="${enlace}" target="_blank">Fuente<a/>`;
+    const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad} <br> 
+    <div id="hechos">${hechos} ${estadoDesaparicion}</div> <br> <a href="${enlace}" target="_blank">Fuente<a/> `;
 
     // TODO: ¿pasar el enlace de las imágenes a Directus?
     // No se si sea necesario ya que de momento son muy pocos iconos.
@@ -172,7 +169,9 @@ async function inicio() {
     });
 
     // Ubicar el marcador de cada caso
-    new mapboxgl.Marker(el).setLngLat(caso.lugar.coordinates).addTo(mapa);
+    if (caso.lugar) {
+      new mapboxgl.Marker(el).setLngLat(caso.lugar.coordinates).addTo(mapa);
+    }
   });
 }
 

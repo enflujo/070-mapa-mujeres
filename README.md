@@ -13,7 +13,7 @@ En el `index.html` dentro del `<head>` se puede usar algo como esto (hay más op
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://..." />
 <meta property="og:title" content="Título..." />
-<meta property="og:descripción" content="Descripción..." />
+<meta property="og:description" content="Descripción..." />
 <meta property="og:image" content="https://...(debe ser una ruta completa: https://... y no './...')" />
 
 <!-- Twitter -->

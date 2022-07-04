@@ -20,7 +20,6 @@ body {
   padding: 0;
 }
 
-a,
 a:link {
   background-color: rgba($colorClaro, 0.2);
   text-decoration: none;
@@ -35,5 +34,9 @@ a:link {
     background-color: rgba($colorClaro, 0);
     padding: 1px 6px;
     border-radius: 6px;
+  }
+
+  &:visited {
+    color: $colorClaro;
   }
 }
