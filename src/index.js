@@ -78,8 +78,7 @@ const abrirCreditos = document.getElementById('acerca');
 
 let etiquetaVisible = false;
 
-let ratonX;
-let ratonY;
+cuerpo.style.display = 'block';
 
 // Crear nuevo mapa usando un estilo y un token de MapBox
 mapboxgl.accessToken = token;
@@ -149,7 +148,6 @@ async function inicio() {
     fecha = fecha.charAt(0).toUpperCase() + fecha.slice(1);
     const edad = caso.edad ? caso.edad : 'desconocida';
     const enlace = caso.enlace ? caso.enlace : '';
-    console.log(caso.id, enlace);
     const hechos = caso.descripcion ? caso.descripcion : '';
 
     caso.tipo_de_agresion.sort();
