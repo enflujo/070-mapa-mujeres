@@ -15,9 +15,6 @@
 
 #titulo {
   text-align: center;
-  margin: 0;
-  margin-top: 0px;
-  margin-left: 0px;
   background-color: #fefbfb;
   color: #8067e7;
   font-family: mono;
@@ -26,11 +23,22 @@
   z-index: 8;
   opacity: 1;
   margin-left: 4%;
-  padding: 15px;
+  margin-top: 2%;
+  padding: 10px;
   border-radius: 10px;
-  margin-top: 3%;
-  font-weight: 900;
-  font-size: 1.7em;
+
+  h1 {
+    font-weight: 900;
+    font-size: 1.5em;
+    line-height: 80%;
+  }
+
+  h2 {
+    padding: 0%;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: -1%;
+  }
 }
 
 #mapa {
@@ -55,7 +63,7 @@
   position: absolute;
   width: 25%;
   height: fit-content;
-  top: 38%;
+  top: 30%;
   left: 37%;
   background-color: #7976c7;
   color: white;
@@ -64,8 +72,8 @@
   visibility: hidden;
   pointer-events: none;
   font-family: monospace;
-  font-size: 1.1em;
-  opacity: 0.9;
+  font-size: 1.2em;
+  opacity: 0.88;
   font-weight: bold;
   pointer-events: auto;
 
@@ -207,8 +215,20 @@
 
 @media only screen and (max-width: 600px) {
   #titulo {
-    font-size: 1.2em;
-    margin: 4%;
+    margin: 6% 10%;
+
+    h1 {
+      font-weight: 900;
+      font-size: 1em;
+      line-height: 100%;
+    }
+
+    h2 {
+      padding: 0%;
+      font-size: 1em;
+      font-weight: normal;
+      margin: -1%;
+    }
   }
 
   #etiqueta {
@@ -217,8 +237,9 @@
     position: absolute;
     width: 85%;
     height: fit-content;
-    top: 25%;
-    left: 7%;
+    top: 30%;
+    left: 8%;
+    font-size: 1.1em;
   }
 
   .imagen {
