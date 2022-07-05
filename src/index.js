@@ -21,6 +21,8 @@ import laMujer from './imgs/fotos/la_mujer_de_bn.jpg';
 import tuOpinion from './imgs/fotos/tu_opinion.jpg';
 import noEsPiropo from './imgs/fotos/no_es_piropo_bn.jpg';
 import noEstamosTodas from './imgs/fotos/no_estamos_todas_bn.jpg';
+import noNaciMujer from './imgs/fotos/no_naci_mujer_bn.jpg';
+import sororidad from './imgs/fotos/sororidad_bn.jpg';
 
 // Importar íconos
 import icAcoso from './imgs/iconos/acoso_rojo.svg';
@@ -48,6 +50,8 @@ const imagenes = [
   tuOpinion,
   noEsPiropo,
   noEstamosTodas,
+  noNaciMujer,
+  sororidad,
 ];
 
 const iconos = {
