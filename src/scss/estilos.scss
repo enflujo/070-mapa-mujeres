@@ -262,11 +262,23 @@
 
   #acerca {
     position: fixed;
-    top: 88%;
+    top: 89%;
+    right: 7%;
+    font-size: 1.5em;
 
     &:hover {
       background-color: $colorOscuro;
       color: $colorClaro;
+    }
+  }
+
+  #logo070 {
+    position: absolute;
+    bottom: 4%;
+    right: 75%;
+
+    img {
+      height: 80px;
     }
   }
 
