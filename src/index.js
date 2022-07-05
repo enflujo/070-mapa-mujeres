@@ -73,8 +73,8 @@ const mapa = new mapboxgl.Map({
   container: 'mapa', // ID del contenedor
   style: 'mapbox://styles/enflujo/cl4zwt7c8001b14mm7funs1ib', //'mapbox://styles/enflujo/cl44ov8i8000214rodtnuvshe',
   // URL del estilo
-  center: [-74.0791, 4.6462], // posición inicial del mapa [long, lat]
-  zoom: 10, // zoom inicial
+  center: [-74.13, 4.67], // posición inicial del mapa [long, lat]
+  zoom: 10.3, // zoom inicial
 });
 
 document.addEventListener('mousemove', (e) => {
