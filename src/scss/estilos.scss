@@ -42,7 +42,7 @@
 }
 
 #logo070 {
-  position: absolute;
+  position: fixed;
   bottom: 2%;
   right: 3%;
 
@@ -72,10 +72,10 @@
   display: flex;
   padding: 2.2em 2em;
   position: absolute;
-  width: 25%;
+  width: 30%;
   height: fit-content;
   top: 30%;
-  left: 37%;
+  left: 34%;
   background-color: #7976c7;
   color: white;
   border-radius: 10px;
@@ -224,6 +224,19 @@
   // display: none;
 }
 
+@media only screen and (max-width: 1025px) {
+  #etiqueta {
+    display: flex;
+    padding: 2.2em 2em;
+    position: absolute;
+    width: 50%;
+    height: fit-content;
+    top: 30%;
+    left: 28%;
+    font-size: 1.1em;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   #titulo {
     margin: 6% 10%;
@@ -246,10 +259,10 @@
     display: flex;
     padding: 2.2em 2em;
     position: absolute;
-    width: 85%;
+    width: 80%;
     height: fit-content;
     top: 30%;
-    left: 8%;
+    left: 10%;
     font-size: 1.1em;
   }
 
@@ -273,9 +286,9 @@
   }
 
   #logo070 {
-    position: absolute;
-    bottom: 4%;
-    right: 75%;
+    position: fixed;
+    top: 87%;
+    right: 77%;
 
     img {
       height: 80px;

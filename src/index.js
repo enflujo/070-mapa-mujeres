@@ -15,6 +15,12 @@ import camino from './imgs/fotos/popayan_camino_a_casa_BN.png';
 import perdon from './imgs/fotos/ni_perdon_BN.png';
 import piropo from './imgs/fotos/no_quiero_su_piropo_pirobo_web_BN.png';
 import respondemos from './imgs/fotos/respondemos_todas7_BN.png';
+import preciosa from './imgs/fotos/estas_preciosa_bn.jpg';
+import felizDia from './imgs/fotos/feliz_el_dia_bn.jpg';
+import laMujer from './imgs/fotos/la_mujer_de_bn.jpg';
+import tuOpinion from './imgs/fotos/tu_opinion.jpg';
+import noEsPiropo from './imgs/fotos/no_es_piropo_bn.jpg';
+import noEstamosTodas from './imgs/fotos/no_estamos_todas_bn.jpg';
 
 // Importar íconos
 import icAcoso from './imgs/iconos/acoso_rojo.svg';
@@ -28,7 +34,21 @@ dayjs.extend(zonaHoraria);
 dayjs.locale('es-mx');
 dayjs.tz.setDefault('America/Bogota');
 
-const imagenes = [violenciaPolicial, puercos, libre, camino, perdon, piropo, respondemos];
+const imagenes = [
+  violenciaPolicial,
+  puercos,
+  libre,
+  camino,
+  perdon,
+  piropo,
+  respondemos,
+  preciosa,
+  felizDia,
+  laMujer,
+  tuOpinion,
+  noEsPiropo,
+  noEstamosTodas,
+];
 
 const iconos = {
   Robo: icRobo,
