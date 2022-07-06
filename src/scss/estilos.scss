@@ -46,6 +46,10 @@
   bottom: 2%;
   right: 3%;
 
+  &:hover {
+    filter: hue-rotate(270deg);
+  }
+
   img {
     height: 100px;
   }
@@ -76,24 +80,27 @@
   display: flex;
   padding: 2.2em 2em;
   position: absolute;
-  width: 30%;
+  width: 34%;
   height: fit-content;
   top: 30%;
-  left: 34%;
+  left: 33%;
   background-color: #7976c7;
   color: white;
   border-radius: 10px;
   z-index: 8;
   visibility: hidden;
   pointer-events: none;
-  font-family: monospace;
-  font-size: 1.2em;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1em;
   opacity: 0.88;
-  font-weight: bold;
   pointer-events: auto;
 
   a:hover {
     color: black;
+  }
+
+  .etiquetaTitulo {
+    font-weight: 800;
   }
 
 }
@@ -110,7 +117,6 @@
 }
 
 #hechos {
-  font-style: italic;
   padding-top: 1em;
 }
 
@@ -157,11 +163,11 @@
   background-color: #7976c7;
   color: white;
   height: 100vh;
-  width: 80vw;
+  width: 60vw;
   position: fixed;
   overflow: auto;
   z-index: 9;
-  padding: 2em 5em;
+  padding: 2em 7em 2em 5em;
   font-size: 1.2em;
   left: -100%;
   opacity: 0;

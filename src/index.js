@@ -100,11 +100,6 @@ const mapa = new mapboxgl.Map({
   zoom: 10.3, // zoom inicial
 });
 
-document.addEventListener('mousemove', (e) => {
-  ratonX = e.clientX;
-  ratonY = e.clientY;
-});
-
 async function inicio() {
   const respuesta = await fetch('https://mujeres.enflujo.com/items/casos');
   const { data: datos } = await respuesta.json();
@@ -158,7 +153,7 @@ async function inicio() {
     } else {
       estadoDesaparicion = '';
     }
-    const infoCaso = `${tiposDeAgresion} <br> ${fecha} <br> Edad: ${edad} <br> 
+    const infoCaso = `<div class="etiquetaTitulo">${tiposDeAgresion}</div> ${fecha} <br> Edad: ${edad} <br> 
     <div id="hechos">${hechos} ${estadoDesaparicion}</div> <br> <a href="${enlace}" target="_blank">Fuente<a/> `;
 
     // TODO: ¿pasar el enlace de las imágenes a Directus?
@@ -170,7 +165,7 @@ async function inicio() {
     el.style.width = `${ancho}px`;
     el.style.height = `${alto}px`;
 
-    el.addEventListener('click', (e) => {
+    el.addEventListener('mouseover', (e) => {
       e.stopPropagation();
       if (!etiquetaVisible) {
         etiqueta.style.visibility = 'visible';
