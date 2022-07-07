@@ -21,13 +21,28 @@ module.exports = {
         },
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: { minimize: true },
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          sources: {
+            list: [
+              {
+                tag: 'meta',
+                attribute: 'content',
+                type: 'src',
+                filter: (tag, attribute, attributes, resourcePath) => {
+                  for (const attribute of attributes) {
+                    if (attribute.value === 'og:image' || attribute.value === 'twitter:image') {
+                      return true;
+                    }
+                  }
+
+                  return false;
+                },
+              },
+            ],
           },
-        ],
+        },
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
