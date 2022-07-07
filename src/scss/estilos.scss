@@ -253,23 +253,38 @@
 
   #agradecimientos {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-
-    .logo {
-      width: 60px;
-      height: auto;
-      margin-left: 35%;
-    }
+    margin-bottom: -4%;
 
     .nombre {
-      width: 90%;
+      width: fit-content;
       display: block;
       text-align: center;
     }
 
+    .logo {
+      width: 60px;
+      height: auto;
+      border-radius: 2px;
+    }
   }
 
+  #colaboracion {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
 
+    .nombre {
+      width: fit-content;
+      margin-top: 9px;
+    }
+
+    .logo {
+      width: auto;
+      height: 60px;
+    }
+  }
 
   // display: none;
 }
@@ -284,6 +299,52 @@
     top: 30%;
     left: 28%;
     font-size: 1.1em;
+  }
+
+
+  #creditos {
+    font-size: 1em;
+    width: 65%;
+    padding: 2em 6em 2em 4em;
+
+    &.visible {
+      left: 0;
+      opacity: 1;
+      display: block;
+    }
+
+    h1 {
+      font-size: 1.4em;
+      font-weight: normal;
+      width: 100%;
+    }
+
+    h3 {
+      border-bottom: 1px dashed lighten($colorOscuro, 20%);
+      padding-bottom: 0.5em;
+      margin: 1.5em 0;
+    }
+
+    .equipo {
+      line-height: 0.95em;
+    }
+
+    #agradecimientos {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      .nombre {
+        display: block;
+        text-align: left;
+      }
+
+      .logo {
+        width: 60px;
+        height: auto;
+        margin-left: 0%;
+      }
+    }
   }
 }
 
@@ -346,6 +407,17 @@
     }
   }
 
+  #enFlujoLogo {
+    background-color: #2aabdd;
+    position: fixed;
+    top: 87%;
+    right: 77%;
+
+    img {
+      height: 80px;
+    }
+  }
+
   #creditos {
     background-color: #7976c7;
     color: white;
@@ -354,7 +426,7 @@
     position: fixed;
     overflow: auto;
     z-index: 9;
-    padding: 1em 2em;
+    padding: 1em 3em;
     font-size: 0.9em;
     left: -100%;
     opacity: 0;
@@ -399,7 +471,5 @@
     .equipo {
       line-height: 0.95em;
     }
-
-    // display: none;
   }
 }
