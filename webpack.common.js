@@ -27,7 +27,7 @@ module.exports = {
           sources: {
             list: [
               {
-                tag: ['meta', 'img'],
+                tag: 'meta',
                 attribute: 'content',
                 type: 'src',
                 filter: (tag, attribute, attributes, resourcePath) => {
