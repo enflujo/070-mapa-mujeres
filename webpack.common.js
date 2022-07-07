@@ -27,6 +27,11 @@ module.exports = {
           sources: {
             list: [
               {
+                tag: 'img',
+                attribute: 'src',
+                type: 'src',
+              },
+              {
                 tag: 'meta',
                 attribute: 'content',
                 type: 'src',
