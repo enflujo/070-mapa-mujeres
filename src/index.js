@@ -24,13 +24,6 @@ import noEstamosTodas from './imgs/fotos/no_estamos_todas_bn.jpg';
 import noNaciMujer from './imgs/fotos/no_naci_mujer_bn.jpg';
 import sororidad from './imgs/fotos/sororidad_bn.jpg';
 
-// Importar íconos
-import icAcoso from './imgs/iconos/acoso_rojo.svg';
-import icRobo from './imgs/iconos/robo_rojo.svg';
-import icAgresionSexual from './imgs/iconos/abuso_rojo2.svg';
-import icDesaparicion from './imgs/iconos/desaparicion_rojo.svg';
-import icViolenciaPolicial from './imgs/iconos/violencia_policial_rojo.svg';
-
 dayjs.extend(utc);
 dayjs.extend(zonaHoraria);
 dayjs.locale('es-mx');
@@ -54,14 +47,6 @@ const imagenes = [
   sororidad,
 ];
 
-const iconos = {
-  Robo: icRobo,
-  'Violencia sexual': icAgresionSexual,
-  'Violencia policial': icViolenciaPolicial,
-  Desaparición: icDesaparicion,
-  'Acoso callejero': icAcoso,
-};
-
 const imagen = document.createElement('img');
 imagen.classList.add('imagen');
 
@@ -75,7 +60,7 @@ const cerrar = document.getElementById('cerrar');
 const cerrarCreditos = document.getElementById('cerrarCreditos');
 const creditos = document.getElementById('creditos');
 const abrirCreditos = document.getElementById('acerca');
-
+const pancarta = document.getElementById('pancarta');
 let etiquetaVisible = false;
 
 cuerpo.style.display = 'block';
@@ -156,16 +141,12 @@ async function inicio() {
     const infoCaso = `<div class="etiquetaTitulo">${tiposDeAgresion}</div> ${fecha} <br> Edad: ${edad} <br> 
     <div id="hechos">${hechos} ${estadoDesaparicion}</div> <br> <a href="${enlace}" target="_blank">Fuente<a/> `;
 
-    // TODO: ¿pasar el enlace de las imágenes a Directus?
-    // No se si sea necesario ya que de momento son muy pocos iconos.
     el.className = 'marcador';
-    // Toca pensar si los iconos cambian según el grupo de categorías. -> Sí cambian
-    // Por ahora pongo el primero de la lista.
-    el.style.backgroundImage = `url(${iconos[caso.tipo_de_agresion[0]]})`;
     el.style.width = `${ancho}px`;
     el.style.height = `${alto}px`;
+    el.innerText = `${caso.nombre}`;
 
-    el.addEventListener('mouseover', (e) => {
+    el.addEventListener('click', (e) => {
       e.stopPropagation();
       if (!etiquetaVisible) {
         etiqueta.style.visibility = 'visible';
@@ -183,6 +164,18 @@ async function inicio() {
       imagen.src = imagenes[num];
       imagen.style.opacity = 0.9;
       imagen.style.visibility = 'visible';
+    });
+
+    el.addEventListener('mouseover', (e) => {
+      el.innerText = `${caso.nombre}`;
+      let muro = '';
+      // for (let i = 0; i < 200; i++) {
+      //   muro += caso.nombre.toUpperCase() + ' ';
+      // }
+      // pancarta.innerText = muro;
+    });
+    el.addEventListener('mouseleave', (e) => {
+      // pancarta.innerText = '';
     });
 
     // Ubicar el marcador de cada caso
