@@ -251,6 +251,26 @@
     }
   }
 
+  #agradecimientos {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      width: 60px;
+      height: auto;
+      margin-left: 35%;
+    }
+
+    .nombre {
+      width: 90%;
+      display: block;
+      text-align: center;
+    }
+
+  }
+
+
+
   // display: none;
 }
 
