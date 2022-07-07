@@ -41,17 +41,34 @@
   }
 }
 
-#logo070 {
+#logos {
+  display: flex;
   position: fixed;
-  bottom: 2%;
+  bottom: 3%;
   right: 3%;
+}
+
+#logoEnflujo {
+  height: fit-content;
+  padding: 20px 5px;
+
+  &:hover {
+    filter: hue-rotate(30deg);
+  }
+
+  img {
+    height: 40px;
+  }
+}
+
+#logo070 {
 
   &:hover {
     filter: hue-rotate(270deg);
   }
 
   img {
-    height: 100px;
+    height: 80px;
   }
 }
 
@@ -78,20 +95,6 @@
     filter: hue-rotate(270deg);
     z-index: 2;
   }
-}
-
-#pancarta {
-  font-family: 'JetBrains Mono', monospace;
-  position: absolute;
-  font-size: 10vh;
-  color: rgb(173, 27, 214);
-  opacity: 0.1;
-  width: 100vw;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 8;
-  text-align: center;
-  // margin-top: 2em;
 }
 
 #etiqueta {
@@ -290,6 +293,21 @@
 }
 
 @media only screen and (max-width: 1025px) {
+  #titulo {
+    width: 50%;
+    margin-left: 7%;
+    margin-top: 4%;
+
+    h1 {
+      font-size: 2em;
+      line-height: 100%;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+  }
+
   #etiqueta {
     display: flex;
     padding: 2.2em 2em;
@@ -300,7 +318,6 @@
     left: 28%;
     font-size: 1.1em;
   }
-
 
   #creditos {
     font-size: 1em;
@@ -397,24 +414,27 @@
     }
   }
 
-  #logo070 {
+  #logos {
+    display: flex;
     position: fixed;
     top: 87%;
-    right: 77%;
+    left: 5%;
+  }
+
+  #logoEnflujo {
+    height: fit-content;
+    padding: 20px 5px;
 
     img {
-      height: 80px;
+      height: 35px;
     }
   }
 
-  #enFlujoLogo {
-    background-color: #2aabdd;
-    position: fixed;
-    top: 87%;
-    right: 77%;
+  #logo070 {
+    margin-left: -14px;
 
     img {
-      height: 80px;
+      height: 70px;
     }
   }
 
