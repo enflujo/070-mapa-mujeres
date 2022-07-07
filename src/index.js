@@ -85,6 +85,8 @@ const mapa = new mapboxgl.Map({
   zoom: 10.3, // zoom inicial
 });
 
+mapa.on('load', inicio);
+
 async function inicio() {
   const respuesta = await fetch('https://mujeres.enflujo.com/items/casos');
   const { data: datos } = await respuesta.json();
@@ -184,7 +186,5 @@ async function inicio() {
     }
   });
 }
-
-inicio();
 
 console.log('..:: EnFlujo ::..');
