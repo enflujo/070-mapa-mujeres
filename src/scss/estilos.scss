@@ -72,11 +72,11 @@
   background-color: rgba(216, 108, 255, 0.76);
   padding: .3em .5em .5em .5em;
   width: auto !important;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "Poppins", sans-serif;
 
   &:hover {
     filter: hue-rotate(270deg);
-    z-index: 100;
+    z-index: 2;
   }
 }
 
