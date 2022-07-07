@@ -225,9 +225,9 @@
   }
 
   h3 {
-    border-bottom: 1px dashed lighten($colorOscuro, 20%);
-    padding-bottom: 0.5em;
-    margin: 1.5em 0;
+    border-top: 1px dashed #cabff5;
+    padding-top: 1.5em;
+    margin: 1.5em 0em 1em 0;
   }
 
   .equipo {
@@ -237,20 +237,12 @@
 
   .persona {
     .rol {
-      font-style: italic;
-
-      &::after {
-        content: '|';
-        width: 1em;
-        padding: 0.5em;
-        display: inline-block;
-        font-style: normal;
-      }
+      font-weight: bold;
     }
 
     .nombre {
-      font-weight: bold;
       letter-spacing: 1px;
+      margin-bottom: 0.5em;
     }
   }
 
