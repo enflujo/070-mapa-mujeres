@@ -1,27 +1,22 @@
 # Mapa de agresiones a mujeres en el espacio público de Bogotá en 2022
 
-## Recomendaciones antes de publicar
+Investigación desarrollada en colaboración con [Cerosetenta](https://cerosetenta.uniandes.edu.co/).
 
-Agregar algunos descriptores sobre el sitio para personalizar la vista cuando se comparte en redes y resultados en busquedas.
+Este mapa hace parte del especial 'Calles Peligrosas: Violencias contra las mujeres en el espacio público de Bogotá' publicado por Cerosetenta. Es un ejercicio de visibilización, sistematización y análisis sobre las distintas violencias que enfrentan las mujeres en el espacio público de la ciudad. Si has sufrido o conoces otros casos de acoso callejero, abuso sexual o desaparición y quisieras sumar tu voz al mapa, te invitamos a llenar [este formulario](https://docs.google.com/forms/d/e/1FAIpQLSfFiJmGgXuFWQVnxVCbr7bRuPkO2DE7k4km-H1_ybgiZ_lN0g/viewform).
 
-En el `index.html` dentro del `<head>` se puede usar algo como esto (hay más opciones, este es un ejemplo genérico que sirve en muchos casos):
+## Equipo
 
-```html
-<meta name="description" content="Una descripción corta del sitio." />
+Investigación principal: Laura Ramos Rico
 
-<!-- Tags OG: Facebook, Whatsapp, etc... -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://..." />
-<meta property="og:title" content="Título..." />
-<meta property="og:description" content="Descripción..." />
-<meta property="og:image" content="https://...(debe ser una ruta completa: https://... y no './...')" />
+Idea y coinvestigación: Lina Vargas Fonseca
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:site" content="@..." />
-<meta property="twitter:url" content="https://..." />
-<meta property="twitter:title" content="Título..." />
-<meta property="twitter:description" content="Descripción..." />
-<meta property="twitter:image" content="https://...(debe ser una ruta completa: https://... y no './...')" />
-<meta property="twitter:image:alt" content="texto alternativo a imagen" />
-```
+Programación: Antonia Bustamante y Juan Camilo González
+
+Diseño: Julián Camilo García y Antonia Bustamante
+
+---
+
+## Desarrollo
+
+- Para cargar los datos en la base de datos del proyecto usamos [Directus](https://directus.io/).
+- Para dibujar el mapa usamos [Mapbox](https://www.mapbox.com/). Es necesario crear un archivo .env con un token de Mapbox para cargar el proyecto y cargar el estilo correspondiente en el archivo _index.js_. En ese mismo archivo pueden configurarse las coordenadas donde se centra el mapa inicialmente y el zoom.

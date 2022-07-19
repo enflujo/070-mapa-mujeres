@@ -7,7 +7,7 @@ import 'dayjs/locale/es-mx';
 import mapboxgl from 'mapbox-gl';
 import { numeroRandom } from './utilidades/ayudas';
 
-// Importar imágenes
+// Importar imágenes. Necesario porque usamos Webpack
 import violenciaPolicial from './imgs/fotos/violencia_policial_BN.png';
 import puercos from './imgs/fotos/puercos_violadores_BN.png';
 import libre from './imgs/fotos/libre_no_valiente_BN.png';
@@ -24,6 +24,7 @@ import noEstamosTodas from './imgs/fotos/no_estamos_todas_bn.jpg';
 import noNaciMujer from './imgs/fotos/no_naci_mujer_bn.jpg';
 import sororidad from './imgs/fotos/sororidad_bn.jpg';
 
+// Traducir fecha a español y configurar la zona horaria
 dayjs.extend(utc);
 dayjs.extend(zonaHoraria);
 dayjs.locale('es-mx');
@@ -78,16 +79,20 @@ function cerrarEtiqueta() {
 }
 
 const mapa = new mapboxgl.Map({
-  container: 'mapa', // ID del contenedor
-  style: 'mapbox://styles/enflujo/cl4zwt7c8001b14mm7funs1ib', //'mapbox://styles/enflujo/cl44ov8i8000214rodtnuvshe',
+  // ID del contenedor
+  container: 'mapa',
   // URL del estilo
-  center: [-74.13, 4.67], // posición inicial del mapa [long, lat]
-  zoom: 10.3, // zoom inicial
+  style: 'mapbox://styles/enflujo/cl4zwt7c8001b14mm7funs1ib',
+  // posición inicial del mapa [long, lat]
+  center: [-74.13, 4.67],
+  // zoom inicial
+  zoom: 10.3,
 });
 
 mapa.on('load', inicio);
 
 async function inicio() {
+  // URL donde se cargan los datos
   const respuesta = await fetch('https://mujeres.enflujo.com/items/casos');
   const { data: datos } = await respuesta.json();
 
@@ -148,6 +153,7 @@ async function inicio() {
     el.style.height = `${alto}px`;
     el.innerText = `${caso.nombre}`;
 
+    // Mostrar etiqueta al hacer clic en un punto
     el.addEventListener('click', (e) => {
       e.stopPropagation();
       if (!etiquetaVisible) {
@@ -170,14 +176,6 @@ async function inicio() {
 
     el.addEventListener('mouseover', (e) => {
       el.innerText = `${caso.nombre}`;
-      let muro = '';
-      // for (let i = 0; i < 200; i++) {
-      //   muro += caso.nombre.toUpperCase() + ' ';
-      // }
-      // pancarta.innerText = muro;
-    });
-    el.addEventListener('mouseleave', (e) => {
-      // pancarta.innerText = '';
     });
 
     // Ubicar el marcador de cada caso
