@@ -18,5 +18,5 @@ Diseño: Julián Camilo García y Antonia Bustamante
 
 ## Desarrollo
 
-- Para cargar los datos en la base de datos del proyecto usamos [Directus](https://directus.io/).
+- Para cargar los datos en la base de datos del proyecto usamos [Directus](https://directus.io/), alojada en https://mujeres.enflujo.com.
 - Para dibujar el mapa usamos [Mapbox](https://www.mapbox.com/). Es necesario crear un archivo .env con un token de Mapbox para cargar el proyecto y cargar el estilo correspondiente en el archivo _index.js_. En ese mismo archivo pueden configurarse las coordenadas donde se centra el mapa inicialmente y el zoom.

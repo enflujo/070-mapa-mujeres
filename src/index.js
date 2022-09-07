@@ -48,6 +48,15 @@ const imagenes = [
   sororidad,
 ];
 
+// Colores del marcador según el tipo de agresión
+const colores = {
+  Desaparición: 'rgba(153, 51, 255, 0.76)',
+  Robo: 'rgba(255, 102, 255, 0.8)',
+  'Violencia sexual': 'rgba(153, 0, 204, 0.7)',
+  'Violencia policial': 'rgba(216, 108, 255, 0.8)',
+  'Acoso callejero': 'rgba(255, 51, 153, 0.76)',
+};
+
 const imagen = document.createElement('img');
 imagen.classList.add('imagen');
 
@@ -61,7 +70,6 @@ const cerrar = document.getElementById('cerrar');
 const cerrarCreditos = document.getElementById('cerrarCreditos');
 const creditos = document.getElementById('creditos');
 const abrirCreditos = document.getElementById('acerca');
-const pancarta = document.getElementById('pancarta');
 let etiquetaVisible = false;
 
 cuerpo.style.display = 'block';
@@ -129,6 +137,8 @@ async function inicio() {
     const ancho = 30;
     const alto = 30;
     const fechaJS = dayjs(caso.fecha);
+    const colorFondo = colores[caso.tipo_de_agresion[0]];
+    el.style.backgroundColor = colorFondo ? colorFondo : 'yellow'; //colorMarcador(caso);
 
     // Información de la etiqueta
     let fecha = caso.fecha ? fechaJS.format('MMMM D, YYYY') : 'desconocida';
@@ -167,6 +177,7 @@ async function inicio() {
 
       // Mostrar una imagen sobrepuesta al mapa relacionada con el tipo de agresión
       cuerpo.appendChild(imagen);
+
       let num = numeroRandom(0, imagenes.length - 1);
       lienzo.style.opacity = 0.1;
       imagen.src = imagenes[num];
@@ -179,7 +190,7 @@ async function inicio() {
     });
 
     // Ubicar el marcador de cada caso
-    if (caso.lugar) {
+    if (caso.lugar && caso.publicado === true) {
       new mapboxgl.Marker(el).setLngLat(caso.lugar.coordinates).addTo(mapa);
     }
   });
