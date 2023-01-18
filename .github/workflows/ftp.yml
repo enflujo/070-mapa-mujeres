@@ -12,24 +12,27 @@ jobs:
     steps:
       - name: 🐯 Obtener código del repositorio
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: 🐝 Usar Node
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
-          cache: 'npm'
+          node-version: 'lts/*'
 
-      - name: Crear .env
+      - name: 🦊 Crear .env
         run: |
           touch .env
           echo MAPBOX_TOKEN=${{ secrets.MAPBOX_TOKEN }} >> .env
           cat .env
-      - name: 🔨 Hacer build
+
+      - name: 🦒 Instalar dependencias y hacer build
         run: |
-          npm install
-          npm run build
+          yarn install --frozen-lockfile
+          yarn build
+
       - name: 🦅 Enviar por FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: cerosetenta.uniandes.edu.co
           username: ${{ secrets.USUARIO_FTP }}
