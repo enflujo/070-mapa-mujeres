@@ -36,6 +36,6 @@ jobs:
         with:
           server: cerosetenta.uniandes.edu.co
           username: ${{ secrets.USUARIO_070 }}
-          server-dir: public_html/especiales/libres-no-valientes/
+          server-dir: especiales/libres-no-valientes/
           local-dir: ./publico/
           password: ${{ secrets.CLAVE_070 }}
