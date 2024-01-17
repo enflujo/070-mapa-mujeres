@@ -6,6 +6,7 @@ import zonaHoraria from 'dayjs/plugin/timezone';
 import 'dayjs/locale/es-mx';
 import mapboxgl from 'mapbox-gl';
 import { numeroRandom } from './utilidades/ayudas';
+import datos from './utilidades/casos 20240117-143739.json';
 
 // Importar imágenes. Necesario porque usamos Webpack
 import violenciaPolicial from './imgs/fotos/violencia_policial_BN.png';
@@ -60,7 +61,7 @@ const colores = {
 const imagen = document.createElement('img');
 imagen.classList.add('imagen');
 
-const token = process.env.MAPBOX_TOKEN;
+const token = 'pk.eyJ1IjoiZW5mbHVqbyIsImEiOiJjbDNrYWlxNTYwMmFuM2twcW03bm11emxtIn0.yE-JIn-oRYILe5uMbAX4vg';
 const cuerpo = document.getElementById('contenedor');
 const titulo = document.getElementById('titulo');
 const etiqueta = document.getElementById('etiqueta');
@@ -101,8 +102,8 @@ mapa.on('load', inicio);
 
 async function inicio() {
   // URL donde se cargan los datos
-  const respuesta = await fetch('https://mujeres.enflujo.com/items/casos');
-  const { data: datos } = await respuesta.json();
+  // const respuesta = await fetch('https://mujeres.enflujo.com/items/casos');
+  // const { data: datos } = await respuesta.json();
 
   cerrar.innerText = 'x';
 

@@ -1,0 +1,1009 @@
+[
+	{
+		"id": 1,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.05444432340602,
+				4.707230347746545
+			]
+		},
+		"fecha": "2022-03-01",
+		"hora": "20:00:00",
+		"edad": 23,
+		"descripcion": "<p>Gabriela Amezquita Vargas fue robada y acosada sexualmente mientras caminaba por un trecho desocupado entre la calle 127 y la Autopista Norte. Dos hombres la persiguieron, la tumbaron al suelo, le quitaron la ropa y le taparon la boca para impedir que gritara. Alcanzaron a tocar sus partes &iacute;ntimas y la amenazaron con un cuchillo para que se quedara quieta. Finalmente, Gabriela logr&oacute; escapar y pedir ayudar cercana.</p>",
+		"enlace": "https://www.eltiempo.com/bogota/abusaron-de-una-joven-en-la-calle-127-con-autonorte-cerca-de-unicentro-657731",
+		"lugar_descripcion": "Autopista Norte con calle 127",
+		"tipo_de_agresion": [
+			"Violencia sexual",
+			"Robo"
+		],
+		"localidad": "Usaquén",
+		"barrio": "La Carolina",
+		"aparecio": null,
+		"nombre": "Gabriela"
+	},
+	{
+		"id": 2,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.0331417323331,
+				4.82996961366311
+			]
+		},
+		"fecha": "2022-05-02",
+		"hora": "20:00:00",
+		"edad": 31,
+		"descripcion": "<p>Liliana Fern&aacute;ndez, de 31 a&ntilde;os, fue raptada cuando pasaba con su bicileta cerca al peaje de Los Andes. Los ladrones la bajaron de su bicicleta, la llevaron hacia un matorral, la torturaron y la ultrajaron sexualmente.&nbsp;</p>",
+		"enlace": "https://www.semana.com/nacion/articulo/el-dramatico-relato-de-una-mujer-a-la-que-casi-violan-y-matan-por-robarle-su-bicicleta-en-un-centro-de-torturas-en-bogota/202206/",
+		"lugar_descripcion": "Autopista Norte, muy cerca del peaje Los Andes",
+		"tipo_de_agresion": [
+			"Robo",
+			"Violencia sexual"
+		],
+		"localidad": "Usaquén",
+		"barrio": "La Caro",
+		"aparecio": null,
+		"nombre": "Liliana"
+	},
+	{
+		"id": 3,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.03517102179563,
+				4.82068110611327
+			]
+		},
+		"fecha": "2022-04-20",
+		"hora": null,
+		"edad": 25,
+		"descripcion": "<div id=\"formula-bar-name-box-wrapper\" class=\"name-box-enabled formula-bar-with-name-box-wrapper\">\n<div id=\"formula-bar\" class=\"formula-bar formulabar-disabled\">\n<div id=\"t-formula-bar-input-container\">\n<div dir=\"ltr\">\n<div id=\"t-formula-bar-input\" spellcheck=\"false\">\n<p>Una mujer fue v&iacute;ctima de robo, violencia y secuestro. Los ladrones la amarraron y amenzaron con cortarle los dedos si no les entregaba el dinero. Estuvo retenida en contra de su voluntad por m&aacute;s de 5 horas.</p>\n</div>\n</div>\n</div>\n</div>\n</div>",
+		"enlace": "https://www.bluradio.com/blu360/bogota/querian-quitarme-un-dedo-escabroso-relato-de-otra-mujer-victima-de-ladrones-en-norte-de-bogota-pr30",
+		"lugar_descripcion": "Calle 245 con Autopista Norte",
+		"tipo_de_agresion": [
+			"Violencia sexual",
+			"Robo"
+		],
+		"localidad": "Usaquén",
+		"barrio": "La Caro",
+		"aparecio": null,
+		"nombre": "¿?"
+	},
+	{
+		"id": 4,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.12263736429136,
+				4.717046630974892
+			]
+		},
+		"fecha": "2022-02-28",
+		"hora": null,
+		"edad": null,
+		"descripcion": "<p>Una mujer denunci&oacute; ser acosada y golpeada en un CAI en Bogot&aacute;. Luego de ser detenida por un altercado en un establecimiento, la mujer fue llevada al CAI de Villas de Granada donde los polic&iacute;as le insinuaron que deb&iacute;a hacerles sexo oral y la forzaron a quitarse la ropa. Adem&aacute;s, intentaron obligar a la mujer a firmar un documento sin leer y ante su negaci&oacute;n, una polic&iacute;a la golpeo varias veces para persuadirla de firmar.</p>",
+		"enlace": "https://www.wradio.com.co/2022/03/02/mujer-denuncia-haber-sido-acosada-y-golpeada-en-un-cai-en-bogota/",
+		"lugar_descripcion": "CAI Villas De Granada",
+		"tipo_de_agresion": [
+			"Violencia policial"
+		],
+		"localidad": "Engativá",
+		"barrio": "Villas de Granada",
+		"aparecio": null,
+		"nombre": "Laura Ruiz"
+	},
+	{
+		"id": 5,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.1719437658462,
+				4.624254771426934
+			]
+		},
+		"fecha": "2022-05-20",
+		"hora": null,
+		"edad": 14,
+		"descripcion": "<p>Mar&iacute;a Fernanda Rozo Aguilar <br />Fue vista por &uacute;ltima vez en el Colegio San Ricardo Pampurri. Tiene 14 a&ntilde;os, piel morena, pelo casta&ntilde;o, dos lunares al lado derecho de la nariz y el d&iacute;a de su desaparici&oacute;n vest&iacute;a la sudadera del colegio.</p>",
+		"enlace": "https://twitter.com/KarenSofiaLpzR2/status/1528897025638531072?s=20&t=2dxmJCpk30xKhNQ1ljrN3A",
+		"lugar_descripcion": "Barrio Britalia, Kennedy",
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Kennedy",
+		"barrio": "Britalia",
+		"aparecio": null,
+		"nombre": "María Fernanda"
+	},
+	{
+		"id": 6,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.11931635792615,
+				4.56980252283968
+			]
+		},
+		"fecha": "2022-05-14",
+		"hora": "00:30:00",
+		"edad": null,
+		"descripcion": "<p>Una mujer solicita un taxi despu&eacute;s de la media noche, presuntamente a trav&eacute;s de la aplicaci&oacute;n Taxis Libres. La foto del tarjet&oacute;n del taxi no coincide con el conductor, sin embargo, ella aborda el taxi de placas GUX368. Cerca del supermercado El L&iacute;der, en el barrio Candelar&iacute;a La Nueva, el hombre la amenaza con un arma blanca y le exige quitarse la ropa. La mujer huye de lugar y realiza la denuncia por redes sociales.</p>",
+		"enlace": "https://twitter.com/SoyAngelitaBM/status/1525134077828993024",
+		"lugar_descripcion": "Taxi. Desde barrio Marco Fidel Suárez (Tunjuelito) con destino a Soacha, a la altura de la Cl. 64 Sur #29-51.",
+		"tipo_de_agresion": [
+			"Violencia sexual"
+		],
+		"localidad": "Ciudad Bolívar",
+		"barrio": "Candelaria La Nueva",
+		"aparecio": null,
+		"nombre": "¿?"
+	},
+	{
+		"id": 7,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.24632129473517,
+				4.575478469116149
+			]
+		},
+		"fecha": "2022-05-11",
+		"hora": null,
+		"edad": null,
+		"descripcion": "<p>Luisa Romero desapareci&oacute; el 11 de mayo en el barrio Ciudad Latina.<br />Este caso fue reportado por la Asamblea Popular de Mujeres Xuacha.</p>",
+		"enlace": "https://www.facebook.com/AsambleaPopulardeMujeresXuacha/photos/pcb.582066403384343/582066373384346",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Soacha",
+		"barrio": "Ciudad Latina",
+		"aparecio": null,
+		"nombre": "Luisa"
+	},
+	{
+		"id": 9,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.2200169288864,
+				4.583005163452654
+			]
+		},
+		"fecha": "2022-05-03",
+		"hora": "11:00:00",
+		"edad": 25,
+		"descripcion": "<p>Alexandra Pamplona<br />25 a&ntilde;os, desapareci&oacute; de su casa en Soacha (Cundinamarca) el 3 de mayo en horas de la ma&ntilde;ana. El d&iacute;a de su desaparici&oacute;n vest&iacute;a un pantal&oacute;n azul, camiseta blanca y tenis de color negro.&nbsp;</p>",
+		"enlace": "https://soachainiciativaciudadana.com/aparecio-alexandra-pamplona-la-joven-que-habia-desaparecido-hace-mas-de-un-mes-en-soacha/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Soacha",
+		"barrio": null,
+		"aparecio": true,
+		"nombre": "Alexandra"
+	},
+	{
+		"id": 10,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.22045537897111,
+				4.582305337509183
+			]
+		},
+		"fecha": "2022-05-08",
+		"hora": null,
+		"edad": 14,
+		"descripcion": "<p>Alida del Carmen Casta&ntilde;eda Regalado <br />Desaparecida desde el 8 de mayo en Soacha.</p>",
+		"enlace": "https://www.facebook.com/photo?fbid=10158439177926651&set=gm.2159652344201742",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Soacha",
+		"barrio": null,
+		"aparecio": null,
+		"nombre": "Alida"
+	},
+	{
+		"id": 11,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.21272132431423,
+				4.580488654975866
+			]
+		},
+		"fecha": "2022-04-17",
+		"hora": null,
+		"edad": null,
+		"descripcion": "<p>Xiomara Gil <br />Se encuentra desaparecida en el sector de Andaluc&iacute;a, Soacha.</p>",
+		"enlace": "https://www.facebook.com/suacha.comunica/photos/pcb.3263887490598254/3263887450598258/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Soacha",
+		"barrio": "Andalucía",
+		"aparecio": null,
+		"nombre": "Xiomara"
+	},
+	{
+		"id": 12,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.21924064622625,
+				4.585254019348483
+			]
+		},
+		"fecha": "2022-04-26",
+		"hora": "12:00:00",
+		"edad": null,
+		"descripcion": "<p>Desaparici&oacute;n de mujer en el municipio de Soacha, este caso fue reportado por el Colectivo Mujeres de Soacha.</p>",
+		"enlace": "https://www.facebook.com/photo/?fbid=1422405774872214&set=gm.1991858007654369",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Soacha",
+		"barrio": null,
+		"aparecio": null,
+		"nombre": "¿?"
+	},
+	{
+		"id": 14,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.21927294901198,
+				4.582004858722882
+			]
+		},
+		"fecha": "2022-04-18",
+		"hora": null,
+		"edad": 15,
+		"descripcion": "<p><span dir=\"auto\">Nicol Lorena Linares Forero <br />Fue vista por &uacute;ltima vez en el municipio de Soacha.<br /></span></p>",
+		"enlace": "https://www.facebook.com/photo?fbid=10160193868992456&set=a.10150689968082456",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Soacha",
+		"barrio": "Nicol",
+		"aparecio": false,
+		"nombre": "Nicol"
+	},
+	{
+		"id": 15,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.07706414878128,
+				4.613446241126255
+			]
+		},
+		"fecha": "2022-01-26",
+		"hora": null,
+		"edad": 21,
+		"descripcion": "<p>Roxibel Angeli Arroyo Arroyo <br />Se encuentra desaparecida, tiene cabello negro largo con las puntas grises, ojos caf&eacute; oscuro, un rosario tatuado en la mano derecha, en la mano izquierda una mu&ntilde;eca y un rosario en el abdomen. Adem&aacute;s tiene un lunar cerca del ombligo y brackets.<br /><br /></p>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid024qxyzv1wWS2Dvv7gJCitJbHpY8idCVFt7fG45FsmhmeZkiU3BLLoDieBchUz7dh7l/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Los Mártires",
+		"barrio": "Santa Fe",
+		"aparecio": null,
+		"nombre": "Roxibel"
+	},
+	{
+		"id": 16,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.18841489232325,
+				4.641129466324188
+			]
+		},
+		"fecha": "2022-02-14",
+		"hora": null,
+		"edad": 14,
+		"descripcion": "<div>\n<div dir=\"auto\">Adriana Luc&iacute;a Galeano Rodr&iacute;guez <br />Fue vista por &uacute;ltima vez con pijama t&eacute;rmica de dos piezas, color blanco con huellas rosadas y chancletas rosadas. Tiene cabello largo hasta la cintura color negro y mide 1.53 m.</div>\n<div dir=\"auto\">&nbsp;</div>\n</div>\n<div>&nbsp;</div>\n<div class=\"cxmmr5t8 oygrvhab hcukyx3x c1et5uql o9v6fnle ii04i59q\">\n<div dir=\"auto\">&nbsp;</div>\n</div>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid025KTN1hdJiZNL16Lh9krU9khMNH7hZjp9PQg91TRRqG5uEmY5n3RdPWmEaASjRuFl/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Bosa",
+		"barrio": "Porvenir",
+		"aparecio": true,
+		"nombre": "Adriana Lucía"
+	},
+	{
+		"id": 17,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.10852371106941,
+				4.504391065882444
+			]
+		},
+		"fecha": "2022-04-18",
+		"hora": "06:00:00",
+		"edad": 13,
+		"descripcion": "<p>Danna Valentina Boh&oacute;rquez G&oacute;mez <br />Se encuentra desaparecida. Es alta, blanca, tiene un piercing en la nariz y otro en la lengua, el cabello casta&ntilde;o claro. Vista por &uacute;ltima vez en el barrio Bellavista, Usme.</p>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid02mTJNwrPKem2S4QHh75MrZnJAdX7bqY9onMqFdBBknpXZsqWsRZB6Nn4ejXA85FJWl/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Usme",
+		"barrio": "Bella Vista",
+		"aparecio": null,
+		"nombre": "Danna"
+	},
+	{
+		"id": 18,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.15857166199898,
+				4.569809871638782
+			]
+		},
+		"fecha": "2022-02-04",
+		"hora": null,
+		"edad": null,
+		"descripcion": "<p>Julieth Vaquero tom&oacute; el alimentador de Transmilenio -ruta 69 de Arborizado Alta- &nbsp;despu&eacute;s de recoger &nbsp;a sus hijos del colegio. Cuando todos estaban abordo del alimentador, en la segunda parada se subi&oacute; un hombre que se ubic&oacute; detr&aacute;s de Julieth y de sus hijos. Ella sinti&oacute; al sujeto muy cerca, la espalda caliente y frotaciones inusuales. Cuando Julieth se gir&oacute; el hombre estaba guardando sus genitales dentro del pantal&oacute;n y Julieth se encontraba h&uacute;meda.&nbsp;</p>",
+		"enlace": "https://www.eltiempo.com/bogota/mujer-denuncia-haber-sido-acosada-en-un-bus-alimentador-de-transmilenio-649475",
+		"lugar_descripcion": "Bus alimentador de TransMilenio en la ruta 69 de Arborizado Alta.",
+		"tipo_de_agresion": [
+			"Violencia sexual"
+		],
+		"localidad": "Ciudad Bolívar",
+		"barrio": "Manuela Beltrán",
+		"aparecio": null,
+		"nombre": "Julieth"
+	},
+	{
+		"id": 19,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.10970567743594,
+				4.711036137140312
+			]
+		},
+		"fecha": "2022-03-02",
+		"hora": "03:00:00",
+		"edad": 28,
+		"descripcion": "<p>Una mujer fue abusada sexualmente en el espacio p&uacute;blico cuando baj&oacute; del bus del SITP. El conductor tom&oacute; un desv&iacute;o y casi todos los pasajeros decidieron bajarse. Cuando la mujer lleg&oacute; a su destino, fue atacada por dos hombres en un potrero.&nbsp;</p>",
+		"enlace": "https://www.rcnradio.com/bogota/mujer-habria-sido-violada-por-tres-personas-en-sitp-con-presunta-complicidad-del-conductor",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Violencia sexual"
+		],
+		"localidad": "Engativá",
+		"barrio": null,
+		"aparecio": null,
+		"nombre": "¿?"
+	},
+	{
+		"id": 20,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.06550186086172,
+				4.649581856202275
+			]
+		},
+		"fecha": "2022-02-17",
+		"hora": "14:00:00",
+		"edad": null,
+		"descripcion": "<p>Una mujer denunci&oacute; por redes que cuando se encontraba camino a una estaci&oacute;n de Transmilenio un hombre la segu&iacute;a, ella notaba los pasos y la cercan&iacute;a del hombre hasta que logr&oacute; coger su brazo y le impidi&oacute; seguir caminando. &nbsp;&ldquo;Catalina deje de hacer show, nos vamos ya para la casa&rdquo;, girtaba el hombre mientras la arrastraba en sentido opuesto a la estaci&oacute;n de Transmilenio. La mujer pidi&oacute; ayuda a los transe&uacute;ntes, pero el hombre invalidaba su auxilio diciendo &ldquo;otra vez con esa mie#$%, deje de hacerme show&rdquo;. Al final, la mujer logr&oacute; soltarse y salir corriendo para ponerse a salvo.&nbsp;</p>",
+		"enlace": "https://noticias.caracoltv.com/bogota/fingiendo-ser-su-novio-desconocido-la-agredio-en-calle-de-bogota-grave-denuncia",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Acoso callejero"
+		],
+		"localidad": "Chapinero",
+		"barrio": null,
+		"aparecio": null,
+		"nombre": "Isabel"
+	},
+	{
+		"id": 21,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.14957225889488,
+				4.631431428575553
+			]
+		},
+		"fecha": "2022-01-09",
+		"hora": null,
+		"edad": 13,
+		"descripcion": "<p>Sof&iacute;a Alexandra Albarrac&iacute;n Pach&oacute;n <br />Fue vista por &uacute;ltima vez en la localidad de Kennedy, Bogot&aacute;. El d&iacute;a de su desaparici&oacute;n vest&iacute;a jean azul, gab&aacute;n negro y tenis negros. Tiene una estatura de 1,45 m, contextura delgada y ojos claros.</p>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid0PiUFwGsR4HDG9HJHM4AfiarUktknQwZXakndpLKm6vh8MNxW4zPhPion3DmeQNW9l/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Kennedy",
+		"barrio": null,
+		"aparecio": true,
+		"nombre": "Sofía"
+	},
+	{
+		"id": 22,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.1157952064567,
+				4.540717315794325
+			]
+		},
+		"fecha": "2022-01-16",
+		"hora": null,
+		"edad": 12,
+		"descripcion": "<div dir=\"auto\">Valery Fernanda Moreno Rodr&iacute;guez</div>\n<div dir=\"auto\">Fue vista por &uacute;ltima vez en el barrio Danubio con una camisa blanca con naranja, gorra, jean azul claro con rotos y zapatillas gris de plataforma. Tiene piel trigue&ntilde;a, contextura mediana, cabello largo negro y ojos caf&eacute;s.</div>\n<div dir=\"auto\">&nbsp;</div>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid02P15YPEvfmutrQWgZ4sP3YRUt1DqJAyWAX6DsKziZQxYphTALeycNqfe5scrfrjRDl/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Usme",
+		"barrio": "Danubio",
+		"aparecio": true,
+		"nombre": "Valery"
+	},
+	{
+		"id": 23,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.10190935806182,
+				4.599018958346591
+			]
+		},
+		"fecha": "2022-01-23",
+		"hora": "01:00:00",
+		"edad": 12,
+		"descripcion": "<div>\n<div dir=\"auto\">Laura Isabel L&oacute;pez Garz&oacute;n</div>\n<div dir=\"auto\">Fue vista por &uacute;ltima vez con un boddy negro, jean ancho con rotos, zapatillas blancas y morral Totto color morado. Es delgada, piel clara, cabello largo liso casta&ntilde;o oscuro y ojos caf&eacute;s.</div>\n<div dir=\"auto\">&nbsp;</div>\n</div>\n<div class=\"cxmmr5t8 oygrvhab hcukyx3x c1et5uql o9v6fnle ii04i59q\">\n<div dir=\"auto\">&nbsp;</div>\n</div>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid02kdMftt4G6coNfWPAJ42VZg3QJsrDLFrxHSzjceKkyjEx7vjqAPBK8AJDj6BnFdBul/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Los Mártires",
+		"barrio": "Santa Isabel",
+		"aparecio": true,
+		"nombre": "Laura"
+	},
+	{
+		"id": 24,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.12853746992424,
+				4.646184080342906
+			]
+		},
+		"fecha": "2022-01-26",
+		"hora": null,
+		"edad": 13,
+		"descripcion": "<p>Mar&iacute;a Paola Navarro Cort&eacute;s <br />Fue vista por &uacute;ltima vez con una chaqueta negra, pantal&oacute;n oscuro, tenis blancos y un bolso en la espalda azul oscuro. Cabello negro largo, ojos caf&eacute; oscuro, tiene tatuado una luna y estrellas en el brazo izquierdo, su estatura es de 1.52 m.</p>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid0nV3Eow8CuTSK8joLiNJ9ZgmsFupmRnrKmte86Sepo5oVW2T2bNmfrnE4Gbu56vsbl/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Kennedy",
+		"barrio": null,
+		"aparecio": true,
+		"nombre": "María"
+	},
+	{
+		"id": 25,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.11226406032486,
+				4.60729283417048
+			]
+		},
+		"fecha": "2022-02-26",
+		"hora": null,
+		"edad": 15,
+		"descripcion": "<p>Erika Torres <br />En el momento de su desaparici&oacute;n iba con un buzo negro estampado con una mariposa verde, falda negra de pliegues, medias a la altura de la rodilla de gatito negras. Llevaba una maleta peque&ntilde;a plateada.&nbsp;</p>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid02nhAGqD12XAfupCrpAF5x6hu37Bwk46LFErK345wyNtqD5Nb42Uh9rxeSokVHwx5Sl/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Puente Aranda",
+		"barrio": "Ciudad Montes",
+		"aparecio": true,
+		"nombre": "Erika"
+	},
+	{
+		"id": 26,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.17067507697506,
+				4.620107007582291
+			]
+		},
+		"fecha": "2022-03-05",
+		"hora": "21:45:00",
+		"edad": 15,
+		"descripcion": "<p>Mar&iacute;a Ximena Duarte Lancheros <br />Vest&iacute;a en el momento de su desaparici&oacute;n un pantal&oacute;n azul claro, botas caf&eacute;s y una chaqueta negra peludita. Es de contextura delgada, estatura m&aacute;s o menos de 1.60 m, cabello negro y capul.<br /><br /></p>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid0qJXWsKxpfwizRwDvu6EYtWhat2348Kc83UUwgWcfkdrhrvMLGLyJyde99k3auWC3l/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Bosa",
+		"barrio": "Pastranita",
+		"aparecio": true,
+		"nombre": "María Ximena"
+	},
+	{
+		"id": 27,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.17026601586865,
+				4.568669189501961
+			]
+		},
+		"fecha": "2022-03-07",
+		"hora": "11:00:00",
+		"edad": 19,
+		"descripcion": "<p>Yaksiary Gonz&aacute;lez Quintero<br />Vest&iacute;a una camiseta azul, jean gris y tenis grises en el momento que desapareci&oacute;. Mide aproximadamente 1.60 m, es de contextura media y piel trigue&ntilde;a.<br /><br /></p>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid0M7DQkaZZGWy1wuwAAXmYtkcZvsyjNJDteQbyRz1pNXdSXL1LrfKzSAMSZ9884NRql/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Ciudad Bolívar",
+		"barrio": "Potosí",
+		"aparecio": true,
+		"nombre": "Yaksiary"
+	},
+	{
+		"id": 28,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.09277605204575,
+				4.538007353160083
+			]
+		},
+		"fecha": "2022-03-08",
+		"hora": "19:00:00",
+		"edad": 13,
+		"descripcion": "<p>Jaylin Janine Viloria Olivares <br />Desapareci&oacute; cuando sali&oacute; a la tienda a comprar una cartulina. Se encontraba indocumentada, sin celular. Vest&iacute;a el uniforme del colegio, una sudadera con franja blanca lateral y el escudo del colegio San Jos&eacute; Sur Oriental. Es de tez morena, estatura 1.63 m, cabello a los hombro negro semi ondulado, ojos caf&eacute; oscuro y nariz peque&ntilde;a.<br /><br /></p>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid0nJfVSgRchzTQxXh2nuJeFb8v3DrPmvPFfdthLi3vAvkZhTp4QaDfGjUUWGSdZwcUl/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "San Cristóbal",
+		"barrio": "Santa Rita Sur Oriental",
+		"aparecio": true,
+		"nombre": "Jaylin"
+	},
+	{
+		"id": 29,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.17328295415976,
+				4.576367933918306
+			]
+		},
+		"fecha": "2022-04-06",
+		"hora": null,
+		"edad": 13,
+		"descripcion": "<p>Melani Vargas Moreno <br />Desapareci&oacute; en la localidad de Ciudad Bol&iacute;var. Es de piel blanca, cabello rubio y crespo, ojos grandes caf&eacute; claro, 1.50 m de estatura. Estaba vestida con la sudadera del colegio Cedid Ciudad Bol&iacute;var y llevaba una maleta de figuras de pi&ntilde;as.<br /><br /></p>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid025cQzoQCDMXSp7ng4PpNfP5SqJV2ceUk696bxdE8fLYWFp9F3WWs9hcf18EnmtfZql/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Ciudad Bolívar",
+		"barrio": "Santa Viviana",
+		"aparecio": true,
+		"nombre": "Melani"
+	},
+	{
+		"id": 30,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.08881116777113,
+				4.586868722447761
+			]
+		},
+		"fecha": "2022-04-20",
+		"hora": "12:30:00",
+		"edad": 15,
+		"descripcion": "<p>Laura Valentina S&aacute;nchez Contreras <br />Fue vista con la sudadera del Colegio T&eacute;cnico Jaime Pardo Leal. Es alta, trigue&ntilde;a y tiene pelo negro largo.<br /><br /></p>",
+		"enlace": "https://www.facebook.com/102833365045022/posts/pfbid02kb4erdCzbxbNaTRJFCyKrg9cXPafwXYfhS6TBJkVCVNfKuSXBzasY64zpmsMXsiDl/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Antonio Nariño",
+		"barrio": "Policarpa",
+		"aparecio": true,
+		"nombre": "Valentina"
+	},
+	{
+		"id": 31,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.05631675584841,
+				4.653772417330614
+			]
+		},
+		"fecha": "2022-04-22",
+		"hora": "18:00:00",
+		"edad": 17,
+		"descripcion": "<p>Una mujer fue abusada dentro de un taxi que cogi&oacute; en Chapinero. Sali&oacute; de su trabajo y se subi&oacute; al veh&iacute;culo para regresar a su casa. Fue econtrada en la localidad de Ciudad Bol&iacute;var 7 horas despu&eacute;s de haber sido reportada como desaparecida.</p>",
+		"enlace": "https://www.eltiempo.com/bogota/abusan-de-una-joven-de-17-anos-en-un-taxi-que-cogio-en-chapinero-667446",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Violencia sexual"
+		],
+		"localidad": "Chapinero",
+		"barrio": null,
+		"aparecio": null,
+		"nombre": "¿?"
+	},
+	{
+		"id": 32,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.10592696733056,
+				4.591565639050799
+			]
+		},
+		"fecha": "2022-03-27",
+		"hora": "22:00:00",
+		"edad": null,
+		"descripcion": "<p>Una mujer polic&iacute;a fue violada y golpeada por sus compa&ntilde;eros de trabajo afuera de un bar. All&iacute; presuntamente la habr&iacute;an drogado y golpeado repetidas veces, seg&uacute;n las c&aacute;maras que registran los videos con las agresiones. La mujer despert&oacute; el domingo en la tarde, en su casa, desnuda y con se&ntilde;ales de violaci&oacute;n en su cuerpo.</p>",
+		"enlace": "https://www.elheraldo.co/judicial/patrullera-de-puerto-colombia-denuncia-abuso-sexual-por-sus-companeros-en-bogota-899075",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Violencia sexual"
+		],
+		"localidad": "Antonio Nariño",
+		"barrio": "Reestrepo",
+		"aparecio": null,
+		"nombre": "Dayanis"
+	},
+	{
+		"id": 33,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.19644401117871,
+				4.587459307936797
+			]
+		},
+		"fecha": "2022-07-07",
+		"hora": null,
+		"edad": 17,
+		"descripcion": "<p><span dir=\"auto\">Ellen Danitza P&eacute;rez Fl&oacute;rez<br /></span><span dir=\"auto\">Viste sudadera roja, top negro, tenis blancos, cabello negro, piel blanca, piercing en la nariz, perforaci&oacute;n arriba en la oreja, lunar en mejilla visible, tiene brackets.<br /></span><span dir=\"auto\">Vista por &uacute;ltima vez en Terreros, Soacha.</span></p>",
+		"enlace": "https://www.facebook.com/Buscarlashastaencontrarlas/photos/a.104807508180941/441817281146627/",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Soacha",
+		"barrio": "Terreros",
+		"aparecio": null,
+		"nombre": "Ellen"
+	},
+	{
+		"id": 34,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.12680453853743,
+				4.682298697261871
+			]
+		},
+		"fecha": "2022-07-07",
+		"hora": "19:00:00",
+		"edad": 14,
+		"descripcion": "<div class=\"cxmmr5t8 oygrvhab hcukyx3x c1et5uql o9v6fnle ii04i59q\">\n<div dir=\"auto\" style=\"text-align: start;\">Laura Camila Barriga Rojas</div>\n</div>\n<div class=\"cxmmr5t8 oygrvhab hcukyx3x c1et5uql o9v6fnle ii04i59q\">\n<div dir=\"auto\" style=\"text-align: start;\">Mide 1.65, pesa 72 Kg, contextura gruesa, sin tatuajes, cabello color caf&eacute; hasta la cintura.</div>\n</div>\n<div class=\"cxmmr5t8 oygrvhab hcukyx3x c1et5uql o9v6fnle ii04i59q\">\n<div dir=\"auto\" style=\"text-align: start;\">Fue vista por &uacute;ltima vez en el barrio Fontib&oacute;n, Puerta de Teja.</div>\n</div>",
+		"enlace": null,
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Desaparición"
+		],
+		"localidad": "Fontibón",
+		"barrio": "Puerta de Teja",
+		"aparecio": null,
+		"nombre": "Camila"
+	},
+	{
+		"id": 35,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.06768931914792,
+				4.692051450965835
+			]
+		},
+		"fecha": "2022-01-21",
+		"hora": null,
+		"edad": 26,
+		"descripcion": "<p>Alexandra S&aacute;nchez denunci&oacute; que su hija de 26 a&ntilde;os, quien tiene problemas cognitivos, sordera y epilepsia, fue violada por el m&eacute;dico Nelson Coutin en el Hospital Fray Bartolom&eacute; de las Casas, el pasado 21 de enero en Bogot&aacute;.</p>",
+		"enlace": "https://caracol.com.co/emisora/2022/04/27/bogota/1651040425_017583.html",
+		"lugar_descripcion": "Hospital Fray Bartolomé de las Casas",
+		"tipo_de_agresion": [
+			"Violencia sexual"
+		],
+		"localidad": "Suba",
+		"barrio": null,
+		"aparecio": null,
+		"nombre": "¿?"
+	},
+	{
+		"id": 36,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.07071497853765,
+				4.604675348668834
+			]
+		},
+		"fecha": null,
+		"hora": "19:00:00",
+		"edad": 21,
+		"descripcion": "<p>Sal&iacute; de la clase un poco tarde y me dirig&iacute; hac&iacute;a el paradero de siempre al frente del Bacat&aacute;. Eran aproximadamente las 7 p.m. y un se&ntilde;or se me acerc&oacute; a preguntarme si ah&iacute; paraba una ruta del SITP, le respond&iacute; que s&iacute;. Pronto sigui&oacute; pregunt&aacute;ndome cosas como mi nombre, qu&eacute; estudiaba y finalmente qu&eacute; bus tomaba y d&oacute;nde viv&iacute;a. Preguntas que respond&iacute; con datos falsos mientras me alejaba de su lado. El se&ntilde;or segu&iacute;a acerc&aacute;ndose y me hablaba de c&oacute;mo hab&iacute;a salido a tomar con sus amigos pero ellos ya no quer&iacute;an y &eacute;l s&iacute; quer&iacute;a seguir, pregunt&aacute;ndome si me gustaba la cerveza, y as&iacute;. Menos mal lleg&oacute; mi ruta y par&oacute; un poco lejos, por lo que me fui muy r&aacute;pido, antes de que &eacute;l pudiera seguirme. Fue horrible.</p>",
+		"enlace": null,
+		"lugar_descripcion": "Calle 19 Carrea 6",
+		"tipo_de_agresion": [
+			"Acoso callejero"
+		],
+		"localidad": "Santa Fe",
+		"barrio": "Las nieves",
+		"aparecio": null,
+		"nombre": "¿?"
+	},
+	{
+		"id": 37,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.06445542600937,
+				4.637157082573538
+			]
+		},
+		"fecha": "2022-03-22",
+		"hora": null,
+		"edad": 18,
+		"descripcion": "<p>&Iacute;bamos camino a la universidad muy temprano (tipo 6:30 a.m.) con una amiga, de repente un carro nos pit&oacute;. Era un se&ntilde;or que se empez&oacute; a masturbar y nos sigui&oacute; aproximadamente 4 cuadras mientras continuaba masturb&aacute;ndose y gritandonos obscenidades.&nbsp;</p>",
+		"enlace": null,
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Acoso callejero"
+		],
+		"localidad": "Chapinero",
+		"barrio": null,
+		"aparecio": null,
+		"nombre": "¿?"
+	},
+	{
+		"id": 38,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.09499602342655,
+				4.734474882671677
+			]
+		},
+		"fecha": null,
+		"hora": null,
+		"edad": 30,
+		"descripcion": "<p>Era de noche, ven&iacute;a un tipo el bicicleta y me hizo un comentario desagradable. No recuerdo qu&eacute; dijo. Pero reaccion&eacute; dici&eacute;ndole: \"&iexcl;Qu&eacute;!\" Ya hab&iacute;a pasado y se devolvi&oacute;. Tuve que cruzar la calle corriendo. No ven&iacute;a gente.</p>",
+		"enlace": null,
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Acoso callejero"
+		],
+		"localidad": "Suba",
+		"barrio": "Rincón",
+		"aparecio": null,
+		"nombre": "Clara"
+	},
+	{
+		"id": 39,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.02521669438198,
+				4.752942795849606
+			]
+		},
+		"fecha": null,
+		"hora": null,
+		"edad": 28,
+		"descripcion": "<p>Miradas lascivas hacia mi busto, saludos y comentarios con morbo.</p>",
+		"enlace": null,
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Acoso callejero"
+		],
+		"localidad": "Usaquén",
+		"barrio": "El Redil",
+		"aparecio": null,
+		"nombre": "María Alejandra"
+	},
+	{
+		"id": 40,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.04940339862145,
+				4.752930304816914
+			]
+		},
+		"fecha": null,
+		"hora": "19:00:00",
+		"edad": 32,
+		"descripcion": "<p>Caminaba de la estaci&oacute;n Portal Norte hacia mi casa, m&aacute;s o menos a las 7 p.m. La calle estaba sola. De la nada, un tipo que iba pasando en una bicicleta me dio un manotazo en el culo.</p>",
+		"enlace": null,
+		"lugar_descripcion": "Portal del Norte",
+		"tipo_de_agresion": [
+			"Acoso callejero"
+		],
+		"localidad": "Suba",
+		"barrio": "Villa del Prado",
+		"aparecio": null,
+		"nombre": "Laura"
+	},
+	{
+		"id": 41,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.07387379478894,
+				4.638573268894802
+			]
+		},
+		"fecha": null,
+		"hora": "17:30:00",
+		"edad": 30,
+		"descripcion": "<p>Sal&iacute;a de mi trabajo e iba caminando a mi casa. A la distancia vi un hombre que se tocaba mucho su pene, pens&eacute; que intentaba acomodarse o algo. Resulta que cuando iba acerc&aacute;ndome a &eacute;l, se sac&oacute; su pene y empez&oacute; a masturbarse delante de m&iacute;. Le pas&eacute; por el lado. Luego se lo guard&oacute;. Fueron los cinco segundos m&aacute;s desagradables de mi vida. Hab&iacute;a m&aacute;s gente en la calle que lo pudo ver. Otro hombre ven&iacute;a detr&aacute;s y chocamos miradas. No pod&iacute;amos creer lo que acababa de pasar.</p>",
+		"enlace": null,
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Acoso callejero",
+			"Violencia sexual"
+		],
+		"localidad": "Teusaquillo",
+		"barrio": "Quesada",
+		"aparecio": false,
+		"nombre": "Paola"
+	},
+	{
+		"id": 42,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.0902406098371,
+				4.69744430212009
+			]
+		},
+		"fecha": "2022-01-09",
+		"hora": null,
+		"edad": null,
+		"descripcion": "<p>En un bus de Trasmilenio que circulaba por la calle 80, un hombre manose&oacute; y toc&oacute; indebidamente una mujer, quien al percartarse de que el hombre la estaba tocando y ten&iacute;a el pantal&oacute;n desabrochado, reaccion&oacute; y pidi&oacute; apoyo de los dem&aacute;s pasajeros.&nbsp;</p>",
+		"enlace": "https://www.elespectador.com/bogota/acoso-en-transmilenio-pasajeros-atrapan-golpean-y-entregan-a-posible-abusador-en-la-troncal-80-de-bogota-noticias-bogota-hoy/",
+		"lugar_descripcion": "Estación de transmilenio Minuto de Dios",
+		"tipo_de_agresion": [
+			"Violencia sexual",
+			"Acoso callejero"
+		],
+		"localidad": "Engativá",
+		"barrio": "Minuto de Dios",
+		"aparecio": null,
+		"nombre": "¿?"
+	},
+	{
+		"id": 43,
+		"publicado": true,
+		"lugar": {
+			"type": "Point",
+			"coordinates": [
+				-74.06409231712458,
+				4.618946408656029
+			]
+		},
+		"fecha": "2022-07-29",
+		"hora": null,
+		"edad": null,
+		"descripcion": "<p>En horas de la noche un grupo de estudiantes de la Universidad Distrital se encontraba en un bar del barrio La Perseverancia, en el cual tambi&eacute;n se encontraba Felipe Rojas, un egresado de la Universidad Pedag&oacute;gica, quien se enc&oacute;ntraba alicorado y ten&iacute;a una actitud violenta hacia las estudiantes y la due&ntilde;a del local, a quienes agredi&oacute; fisica y verbalmente al solicitarle que se saliera del establecimiento por su mal comportamiento.&nbsp;</p>",
+		"enlace": "https://twitter.com/Caronte_e/status/1561904501002493952",
+		"lugar_descripcion": null,
+		"tipo_de_agresion": [
+			"Violencia policial"
+		],
+		"localidad": "Santa Fe",
+		"barrio": "La Perseverancia",
+		"aparecio": null,
+		"nombre": "¿?"
+	},
+	{
+		"id": 44,
+		"publicado": true,
+		"lugar": null,
+		"fecha": "2022-07-31",
+		"hora": null,
+		"edad": null,
+		"descripcion": "<p>Una mujer es golpeada repetidamente por un hombre, quien adem&aacute;s de empujarla, darle pu&ntilde;os, patadas y botarla al suelo, intenta atropellarla en dos ocasiones.</p>",
+		"enlace": "https://twitter.com/NoticiasCaracol/status/1555167809189060613?s=20",
+		"lugar_descripcion": "Calle 68 con carrera 71",
+		"tipo_de_agresion": [
+			"Acoso callejero"
+		],
+		"localidad": "Engativá",
+		"barrio": "La Europa",
+		"aparecio": null,
+		"nombre": "¿?"
+	}
+]
