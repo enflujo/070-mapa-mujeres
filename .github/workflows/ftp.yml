@@ -35,7 +35,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: cerosetenta.uniandes.edu.co
-          username: ${{ secrets.USUARIO_FTP }}
+          username: ${{ secrets.USUARIO_070 }}
           server-dir: public_html/especiales/libres-no-valientes/
           local-dir: ./publico/
-          password: ${{ secrets.CLAVE_FTP }}
+          password: ${{ secrets.CLAVE_070 }}
